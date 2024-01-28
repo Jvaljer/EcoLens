@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Detect_Mountaint
+  - Detect_Forest
+  - Detect_Sea
   layers:
   - Default
   - TransparentFX
