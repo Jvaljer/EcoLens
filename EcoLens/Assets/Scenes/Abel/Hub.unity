@@ -349,7 +349,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 985401331711884416}
+        m_TargetAssemblyTypeName: DoorDetectors, Assembly-CSharp
+        m_MethodName: EnterMountain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -705,11 +717,129 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+--- !u!1 &687295227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7696548424635294048, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+  m_PrefabInstance: {fileID: 687295226}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &733839319 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2293356590691725752, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
   m_PrefabInstance: {fileID: 985401331711884415}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &733839320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733839319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 607750843}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 985401331711884416}
+        m_TargetAssemblyTypeName: DoorDetectors, Assembly-CSharp
+        m_MethodName: HoverInForest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 985401331711884416}
+        m_TargetAssemblyTypeName: DoorDetectors, Assembly-CSharp
+        m_MethodName: HoverOutForest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &955451109
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955451109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: 0, z: 0}
+  m_LocalPosition: {x: -105, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1360143157}
@@ -941,6 +1071,119 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2293356591495807983, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
   m_PrefabInstance: {fileID: 985401331711884415}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1009149693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009149692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 607750843}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 985401331711884416}
+        m_TargetAssemblyTypeName: DoorDetectors, Assembly-CSharp
+        m_MethodName: HoverInSea
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 985401331711884416}
+        m_TargetAssemblyTypeName: DoorDetectors, Assembly-CSharp
+        m_MethodName: HoverOutSea
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1021592184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,7 +1656,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360143156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -90, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 955451110}
@@ -1850,7 +2093,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584067303}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 1835967566}
@@ -2140,6 +2383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1835967566}
+  - component: {fileID: 1835967567}
   m_Layer: 0
   m_Name: Mountain
   m_TagString: Untagged
@@ -2155,13 +2399,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835967565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 0}
+  m_LocalPosition: {x: 105, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1584067304}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1835967567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835967565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5447336ef50e4c439e9f2edad83cd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hub_room: {fileID: 985401331711884417}
+  nav: {fileID: 985401331711884416}
 --- !u!1 &1882109510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,6 +2558,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: b2678190be1dbba43b4b9e53d66cae19, type: 2}
     - target: {fileID: 216880509402566489, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 687295227}
+    - target: {fileID: 216880509402566489, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
+      propertyPath: sea_env
+      value: 
+      objectReference: {fileID: 955451109}
+    - target: {fileID: 216880509402566489, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
+      propertyPath: hub_room
+      value: 
+      objectReference: {fileID: 985401331711884417}
+    - target: {fileID: 216880509402566489, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
       propertyPath: sea_door
       value: 
       objectReference: {fileID: 1009149692}
@@ -2308,6 +2578,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 264295584}
     - target: {fileID: 216880509402566489, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
+      propertyPath: forest_env
+      value: 
+      objectReference: {fileID: 259408816}
+    - target: {fileID: 216880509402566489, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
       propertyPath: available_M
       value: 
       objectReference: {fileID: 2100000, guid: d34d1d41dbf29974c956476e6598dc67, type: 2}
@@ -2315,6 +2589,10 @@ PrefabInstance:
       propertyPath: forest_door
       value: 
       objectReference: {fileID: 733839319}
+    - target: {fileID: 216880509402566489, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
+      propertyPath: mountain_env
+      value: 
+      objectReference: {fileID: 1835967565}
     - target: {fileID: 216880509402566489, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
       propertyPath: mountain_door
       value: 
@@ -2404,3 +2682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec4be2270c0a2340a3e9b0cfe82142e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &985401331711884417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 985401331717736788, guid: 7a2211c0a7d6ad7409678454d2a2777e, type: 3}
+  m_PrefabInstance: {fileID: 985401331711884415}
+  m_PrefabAsset: {fileID: 0}
