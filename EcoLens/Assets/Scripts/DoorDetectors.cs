@@ -18,6 +18,8 @@ public class DoorDetectors : MonoBehaviour {
     public GameObject sea_env;
     public GameObject hub_room;
 
+    public GameObject dashboard;
+
     private bool forest = false;
     private bool seaside = false;
     private bool mountain = false;
