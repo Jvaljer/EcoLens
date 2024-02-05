@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Forest : MonoBehaviour {
+    public GameObject player;
+
     public GameObject hub_room;
     public DoorDetectors nav;
-    public GameObject dashboard;
+    public GameObject capsule;
+    public Transform spawn;
 
     void Start(){
         Debug.Log("Forest.cs Starts");
+        capsule.SetActive(true);
+        capsule.transform.GetChild(1).GetComponent<DashBoard>().SetPosition(gameObject.transform.position);
+        capsule.transform.GetChild(1).GetComponent<DashBoard>().SetRotation(gameObject.transform.rotation);
+
+        player.transform.position = spawn.position;
     }
 }

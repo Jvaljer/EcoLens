@@ -43,10 +43,13 @@ public class DashBoard : MonoBehaviour {
         current_time = "past";
     }
 
-    private void SetEnvironment(GameObject env){
+    public void SetEnvironment(GameObject env){
         environment = env;
     }
-    private void SetPosition(Vector3 pos){
+    public void SetPosition(Vector3 pos){
         gameObject.transform.position = pos;
+    }
+    public void SetRotation(Quaternion rota){
+        gameObject.transform.rotation = rota;
     }
 }

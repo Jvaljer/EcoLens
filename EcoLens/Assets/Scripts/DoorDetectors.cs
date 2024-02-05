@@ -16,9 +16,9 @@ public class DoorDetectors : MonoBehaviour {
     public GameObject forest_env;
     public GameObject mountain_env;
     public GameObject sea_env;
-    public GameObject hub_room;
 
-    public GameObject dashboard;
+    public GameObject hub_room;
+    public GameObject floor;
 
     private bool forest = false;
     private bool seaside = false;
@@ -117,8 +117,8 @@ public class DoorDetectors : MonoBehaviour {
             return;
         }
         forest_env.SetActive(true);
-        player.transform.position = forest_env.transform.position;
         hub_room.SetActive(false);
+        floor.SetActive(false);
     }
     public void EnterMountain(){
         Debug.Log("Player trying to enter in MOUNTAIN");
@@ -127,12 +127,11 @@ public class DoorDetectors : MonoBehaviour {
         }
         //here we wanna activate the related environment
         mountain_env.SetActive(true);
-        //teleport the player on the other side of the door (in the middle of the zone)
-        player.transform.position = mountain_env.transform.position;
         //disable the possibility to teleport
             //just don't attach any teleport script to env scripts
         //make the hub disappear
         hub_room.SetActive(false);
+        floor.SetActive(false);
         //give hand to another script (the one attached to the loaded environment)
             //handled by deactivating this script & putting "Start" method in mountain script
     }
@@ -142,7 +141,7 @@ public class DoorDetectors : MonoBehaviour {
             return;
         }
         sea_env.SetActive(true);
-        player.transform.position = sea_env.transform.position;
         hub_room.SetActive(false);
+        floor.SetActive(false);
     }
 }
