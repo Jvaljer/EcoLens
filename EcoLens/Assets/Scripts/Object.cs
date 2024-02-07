@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Object : MonoBehaviour {
+    public DashBoard dashboard;
     
     private bool placed = false;
-    private bool picked = false;
+    private bool in_capsule = true;
     private GameObject holder;
+    public string obj_type;
 
     void Update(){
         if(placed){
@@ -15,10 +17,17 @@ public class Object : MonoBehaviour {
     }
 
     public void Pick(){
-        picked = true;
+        //here we wanna display the related informations of the picked object
+        dashboard.DisplayInformations(obj_type);
     }
     public void Drop(){
-        picked = false;
+        //must implement
+    }
+    public void TakeOut(){
+        in_capsule = false;
+    }
+    public void BringIn(){
+        in_capsule = true;
     }
 
     public void SetHolder(GameObject go){

@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\BtnFollowVisual.cs" />
      <Compile Include="Assets\Scripts\SeaSide.cs" />
      <Compile Include="Assets\Scripts\Forest.cs" />
+     <Compile Include="Assets\Scripts\Object.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Water_Shader_WebGl.shader" />
