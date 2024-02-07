@@ -8,6 +8,7 @@ TagManager:
   - Detect_Forest
   - Detect_Sea
   - Object
+  - Environment
   layers:
   - Default
   - TransparentFX
