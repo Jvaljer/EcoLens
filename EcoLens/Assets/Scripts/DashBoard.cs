@@ -8,6 +8,10 @@ public class DashBoard : MonoBehaviour {
     public Material btn_M;
     public Material btn_hover_M;
 
+    public Transform slot1;
+    public Transform slot2;
+    public Transform slot3;
+
     private string current_time = "present";
 
     public void ButtonHoverEnter(GameObject btn){
@@ -46,10 +50,10 @@ public class DashBoard : MonoBehaviour {
     public void SetEnvironment(GameObject env){
         environment = env;
     }
-    public void SetPosition(Vector3 pos){
-        gameObject.transform.position = pos;
-    }
-    public void SetRotation(Quaternion rota){
-        gameObject.transform.rotation = rota;
+
+    public void PlaceObjects(GameObject o1, GameObject o2, GameObject o3){
+        o1.transform.position = slot1.position;
+        o2.transform.position = slot2.position;
+        o3.transform.position = slot3.position;
     }
 }

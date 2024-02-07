@@ -7,15 +7,23 @@ public class Mountain : MonoBehaviour {
 
     public GameObject hub_room;
     public DoorDetectors nav;
+
     public GameObject capsule;
+    public DashBoard dashboard_script;
     public Transform spawn;
+
+    public GameObject obj1;
+    public GameObject obj2;
+    public GameObject obj3;
 
     void Start(){
         Debug.Log("Mountain.cs Starts");
         capsule.SetActive(true);
-        capsule.transform.GetChild(1).GetComponent<DashBoard>().SetPosition(gameObject.transform.position);
-        capsule.transform.GetChild(1).GetComponent<DashBoard>().SetRotation(gameObject.transform.rotation);
+        capsule.transform.position = gameObject.transform.position;
+        capsule.transform.rotation = gameObject.transform.rotation;
 
         player.transform.position = spawn.position;
+
+        dashboard_script.PlaceObjects(obj1, obj2, obj3);
     }
 }
