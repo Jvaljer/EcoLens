@@ -48,10 +48,12 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Detector.cs" />
+     <Compile Include="Assets\Scripts\BackDoor.cs" />
      <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\MouseLook.cs" />
      <Compile Include="Assets\Scripts\DoorDetectors.cs" />
      <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\DashBoard.cs" />
+     <Compile Include="Assets\Scripts\PlaceHolder.cs" />
      <Compile Include="Assets\Scripts\Mountain.cs" />
      <Compile Include="Assets\Scripts\BtnFollowVisual.cs" />
      <Compile Include="Assets\Scripts\SeaSide.cs" />
