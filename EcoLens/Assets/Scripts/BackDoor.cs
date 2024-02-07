@@ -18,9 +18,23 @@ public class BackDoor : MonoBehaviour {
     //Game Components
     public GameObject hub;
     public GameObject floor;
+    public GameObject capsule;
+    private GameObject environment;
+    public Transform hub_spawn;
+    public GameObject player;
     
+
+    void Start(){
+        environment = GameObject.FindGameObjectsWithTag("Environment")[0];
+    }
+
     public void GoBackHub(){
-        //must implement
+        hub.SetActive(true);
+        floor.SetActive(true);
+        environment.SetActive(false);
+        capsule.SetActive(false);
+
+        player.transform.position = hub_spawn.position;
     }
 
     public void HoverIn(){
