@@ -17,6 +17,9 @@ public class SeaSide : MonoBehaviour {
 
     void Start(){
         Debug.Log("SeaSide.cs Starts");
+    }
+
+    public void Load(){
         capsule.SetActive(true);
         capsule.transform.position = gameObject.transform.position;
         capsule.transform.rotation = gameObject.transform.rotation;

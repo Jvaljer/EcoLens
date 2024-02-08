@@ -18,6 +18,9 @@ public class Mountain : MonoBehaviour {
 
     void Start(){
         Debug.Log("Mountain.cs Starts");
+    }
+
+    public void Load(){
         capsule.SetActive(true);
         capsule.transform.position = gameObject.transform.position;
         capsule.transform.rotation = gameObject.transform.rotation;

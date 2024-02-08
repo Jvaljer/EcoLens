@@ -22,6 +22,7 @@ public class BackDoor : MonoBehaviour {
     private GameObject environment;
     public Transform hub_spawn;
     public GameObject player;
+    public DoorDetectors navigation;
     
 
     void Start(){
@@ -29,9 +30,11 @@ public class BackDoor : MonoBehaviour {
     }
 
     public void GoBackHub(){
+        Debug.Log("Going Back Hub");
         hub.SetActive(true);
         floor.SetActive(true);
         environment.SetActive(false);
+        navigation.ExitRoom();
         capsule.SetActive(false);
 
         player.transform.position = hub_spawn.position;
