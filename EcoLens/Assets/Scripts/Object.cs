@@ -6,6 +6,7 @@ public class Object : MonoBehaviour {
     public DashBoard dashboard;
     
     private bool placed = false;
+    private bool dropped = false;
     private bool in_capsule = true;
     private GameObject holder;
     public string obj_type;
@@ -14,14 +15,23 @@ public class Object : MonoBehaviour {
         if(placed){
             gameObject.transform.position = holder.transform.position;
         }
+        if(dropped){
+            //then we wanna know if it was dropped inside or outside
+            //for that we have 2 options
+                //adding an "in" collider for the capsule and checking if there is a triggering or not
+                //checking for positions
+            
+        }
     }
 
     public void Pick(){
         //here we wanna display the related informations of the picked object
         dashboard.DisplayInformations(obj_type);
+        dropped = false;
     }
     public void Drop(){
-        //must implement
+        dashboard.DisplayInformations(obj_type);
+        dropped = true;
     }
     public void TakeOut(){
         in_capsule = false;
