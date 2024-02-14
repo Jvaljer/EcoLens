@@ -1,129 +1,123 @@
 Using pre-set license
 Built from '2020.3/release' branch; Version is '2020.3.34f1 (9a4c9c70452b) revision 10112156'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 7561 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16235 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity 2020.3.34f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.34f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/abelh/Git/AII-Project/EcoLens
+C:/Users/forna/WORKSPACES/Unity Workspace/EcoLens/AII-Project/EcoLens
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63857
-Successfully changed project path to: C:/Users/abelh/Git/AII-Project/EcoLens
-C:/Users/abelh/Git/AII-Project/EcoLens
+64360
+Successfully changed project path to: C:/Users/forna/WORKSPACES/Unity Workspace/EcoLens/AII-Project/EcoLens
+C:/Users/forna/WORKSPACES/Unity Workspace/EcoLens/AII-Project/EcoLens
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 229.39 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 106.63 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.34f1 (9a4c9c70452b)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2020.3.34f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/abelh/Git/AII-Project/EcoLens/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.34f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/forna/WORKSPACES/Unity Workspace/EcoLens/AII-Project/EcoLens/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: AMD Radeon(TM) Graphics (ID=0x164c)
+    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c8d)
     Vendor:   
-    VRAM:     3780 MB
-    Driver:   27.20.14036.8
+    VRAM:     4021 MB
+    Driver:   27.21.14.6231
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity 2020.3.34f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity 2020.3.34f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity 2020.3.34f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56380
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.34f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.34f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.34f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56168
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity 2020.3.34f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity 2020.3.34f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity 2020.3.34f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.021352 seconds.
-Native extension for LinuxStandalone target not found
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.34f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002160 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 71.26 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 267.73 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.871 seconds
+- Completed reload, in  2.268 seconds
 Domain Reload Profiling:
-	ReloadAssembly (871ms)
-		BeginReloadAssembly (213ms)
+	ReloadAssembly (2269ms)
+		BeginReloadAssembly (99ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (548ms)
-			LoadAssemblies (213ms)
+		EndReloadAssembly (2052ms)
+			LoadAssemblies (96ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (165ms)
+			SetupTypeCache (406ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (38ms)
-			SetupLoadedEditorAssemblies (218ms)
+			RebuildScriptCaches (180ms)
+			SetupLoadedEditorAssemblies (912ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (71ms)
-				BeforeProcessingInitializeOnLoad (13ms)
-				ProcessInitializeOnLoadAttributes (92ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
+				InitializePlatformSupportModulesInManaged (29ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (268ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (412ms)
+				ProcessInitializeOnLoadMethodAttributes (135ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.026188 seconds.
+Registered in 0.027699 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 61.84 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 123.55 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.651 seconds
+- Completed reload, in  3.294 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1653ms)
-		BeginReloadAssembly (313ms)
+	ReloadAssembly (3297ms)
+		BeginReloadAssembly (685ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (24ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (24ms)
-		EndReloadAssembly (1267ms)
-			LoadAssemblies (350ms)
+			CreateAndSetChildDomain (73ms)
+		EndReloadAssembly (2323ms)
+			LoadAssemblies (443ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (353ms)
+			SetupTypeCache (491ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (521ms)
+			RebuildScriptCaches (137ms)
+			SetupLoadedEditorAssemblies (1046ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (62ms)
-				BeforeProcessingInitializeOnLoad (100ms)
-				ProcessInitializeOnLoadAttributes (309ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (124ms)
+				BeforeProcessingInitializeOnLoad (287ms)
+				ProcessInitializeOnLoadAttributes (576ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (14ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (2ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 0.91 ms, found 7 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.86 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2722 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 181.6 MB.
-System memory in use after: 181.8 MB.
+System memory in use before: 193.2 MB.
+System memory in use after: 193.4 MB.
 
-Unloading 37 unused Assets to reduce memory usage. Loaded Objects now: 3146.
-Total: 5.182600 ms (FindLiveObjects: 0.435100 ms CreateObjectMapping: 0.261000 ms MarkObjects: 4.359000 ms  DeleteObjects: 0.125500 ms)
+Unloading 37 unused Assets to reduce memory usage. Loaded Objects now: 3162.
+Total: 7.439500 ms (FindLiveObjects: 0.437600 ms CreateObjectMapping: 0.265200 ms MarkObjects: 6.562000 ms  DeleteObjects: 0.173000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -137,607 +131,408 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b03f93e8e2fe1db72cef99551ce25c9f') in 0.260914 seconds 
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_d3c37e8d-6092-48f4-b81e-93b97326e4d2.asset
+  artifactKey: Guid(dbe8ee5abb1344a4e8a8b80348f13db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_d3c37e8d-6092-48f4-b81e-93b97326e4d2.asset using Guid(dbe8ee5abb1344a4e8a8b80348f13db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '349d36333370b4ef45a9bb1a19d08ee0') in 0.254001 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.752117 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b15188a624b0d71f70c4ddd4ac3045d5') in 0.032231 seconds 
+  Time since last request: 0.001369 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_98TerrainData.asset
+  artifactKey: Guid(ea72d84654e9b474e84e22c83213646c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_98TerrainData.asset using Guid(ea72d84654e9b474e84e22c83213646c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: '24cc80a5d9c1371789178e5627bb61e3') in 0.107077 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.993981 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6c3ee81da9a8184a6d358e5eaa39e04') in 0.027248 seconds 
+  Time since last request: 0.000902 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_c82TerrainData.asset
+  artifactKey: Guid(970eda6935cf11448aeef26e7c064763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_c82TerrainData.asset using Guid(970eda6935cf11448aeef26e7c064763) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: 'f6df3e9803cb73da86d5e82e5f888ed5') in 0.067528 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.798576 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d7d2a82f13b4a8652f6b41b9b8e66ec') in 0.028686 seconds 
+  Time since last request: 0.000785 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_17TerrainData.asset
+  artifactKey: Guid(eb39c6e13e170934981104242fa44cc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_17TerrainData.asset using Guid(eb39c6e13e170934981104242fa44cc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: 'de879ffdf1335a50f23db793ca435941') in 0.072739 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.962814 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b9f27aa310864b1ed2ac35c9adf3dce') in 0.026119 seconds 
+  Time since last request: 0.000903 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_88TerrainData.asset
+  artifactKey: Guid(baf47a5e058ed6c45b23bf702579bee1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_88TerrainData.asset using Guid(baf47a5e058ed6c45b23bf702579bee1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: '1f61454e39e75dca7cd10613b8da6980') in 0.069427 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.969717 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69ca8519245bd7d37c36ce5d96cba753') in 0.028613 seconds 
+  Time since last request: 0.000974 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_d3TerrainData.asset.asset
+  artifactKey: Guid(a88e5bc14870159469ba83d45d3c13ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_d3TerrainData.asset.asset using Guid(a88e5bc14870159469ba83d45d3c13ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: '7379637c92fc4ebc858cbb2d28725739') in 0.071426 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 20.578163 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0c091d8f8aa4e3189e44278f3b3bae7') in 0.028378 seconds 
+  Time since last request: 0.000922 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_17ab8e11-1bc6-46d9-9c08-1c3035e78835.asset
+  artifactKey: Guid(45de57bdbae70d34f9e9b319fd65a7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_17ab8e11-1bc6-46d9-9c08-1c3035e78835.asset using Guid(45de57bdbae70d34f9e9b319fd65a7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb2971c67ccd9df3d3bfcc5f24cbddb') in 0.072062 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.136485 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3a55fab1cc12baeaa5a7c3219525e22') in 0.019664 seconds 
+  Time since last request: 0.000934 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_44TerrainData.asset
+  artifactKey: Guid(ed3286068aa84ec4c9602aea3f07b259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_44TerrainData.asset using Guid(ed3286068aa84ec4c9602aea3f07b259) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: 'a1480f9aea4671c44f30802390a062b5') in 0.093794 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.599414 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eced6edf08cd97c5cbcaf535a8986d30') in 0.022795 seconds 
+  Time since last request: 0.000870 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_88efe361-6f68-4188-bcd0-e9554ca440b9.asset
+  artifactKey: Guid(f2e008cefb3ff674e8c681a3f961fb80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_88efe361-6f68-4188-bcd0-e9554ca440b9.asset using Guid(f2e008cefb3ff674e8c681a3f961fb80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b09bf8fd1d1d6d3e8e3a482449911ed1') in 0.056619 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.172490 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4647d42c818beb076df3367633023790') in 0.027902 seconds 
+  Time since last request: 0.000954 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_832163fb-b19c-4118-97c2-cf0a3b224fca.asset
+  artifactKey: Guid(b273ce15435a60644bcd2c174476a708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_832163fb-b19c-4118-97c2-cf0a3b224fca.asset using Guid(b273ce15435a60644bcd2c174476a708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cf23dbea75938eea57b383fb980228e') in 0.070554 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.246907 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '231f2e5ac43d899e0fa7cf6ea89a6370') in 0.026932 seconds 
+  Time since last request: 0.000931 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_6TerrainData.asset
+  artifactKey: Guid(d22d9bb3e4d3482449647582eb061694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_6TerrainData.asset using Guid(d22d9bb3e4d3482449647582eb061694) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: 'f5638cd42e47f44163c94e65698b4cb1') in 0.065321 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.399929 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70655c6a4fca8c65cde56ee1227a58cd') in 0.027894 seconds 
+  Time since last request: 0.000638 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_6dc76592-a48a-4163-91df-c29ec1a99c66.asset
+  artifactKey: Guid(c40d5572f8d7d6843bd8d20c21f1c0be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_6dc76592-a48a-4163-91df-c29ec1a99c66.asset using Guid(c40d5572f8d7d6843bd8d20c21f1c0be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ac6effd6f77078c8a40d9e19fd1fec') in 0.035880 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.634627 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e680b2a70091e9a36829dbc737375326') in 0.027912 seconds 
+  Time since last request: 0.000658 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_83TerrainData.asset
+  artifactKey: Guid(afb2c8a9f78127d478076de3d46469f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_83TerrainData.asset using Guid(afb2c8a9f78127d478076de3d46469f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: '17411d65695fc8a5068730ab0fc957ae') in 0.059177 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.405527 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbf4d7001c93c33d07322c0b89386c64') in 0.027575 seconds 
+  Time since last request: 0.000637 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_984456c3-d32f-475f-a118-27bb19f92a65.asset
+  artifactKey: Guid(abd9fc8a29ea3f549bf82c3d3b8c843f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_984456c3-d32f-475f-a118-27bb19f92a65.asset using Guid(abd9fc8a29ea3f549bf82c3d3b8c843f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '123e80337e58632465f889593a491d2f') in 0.067240 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.741482 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94877c710f1eaa2a533e74ad7c695558') in 0.027060 seconds 
+  Time since last request: 0.000847 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_c82c1fc5-a7ad-4f88-a7ff-c071a4dae8e5.asset
+  artifactKey: Guid(d9f3564d21751d046890366f3fc55400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_c82c1fc5-a7ad-4f88-a7ff-c071a4dae8e5.asset using Guid(d9f3564d21751d046890366f3fc55400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a399d7cfd966862eb71e1602573897d2') in 0.065173 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.208267 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ae99ac42e1feabcd73587e51347855b') in 0.030368 seconds 
+  Time since last request: 0.000924 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_ffTerrainData.asset.asset
+  artifactKey: Guid(a3c90473d9250534a95c3837eca15972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_ffTerrainData.asset.asset using Guid(a3c90473d9250534a95c3837eca15972) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: 'ef6251e02c05069b973678a288741c7c') in 0.078664 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.068219 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be1f33cc2b2d8be223ab0d5dc5ed44ca') in 0.025901 seconds 
+  Time since last request: 0.000928 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_6TerrainData.asset
+  artifactKey: Guid(d745be52be5bf1d46971f6d075dc6531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_6TerrainData.asset using Guid(d745be52be5bf1d46971f6d075dc6531) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: '050c2fab136e6fb755020463ba2f7d66') in 0.072946 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 48.477892 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e91afaf73d4a5c554c5c9dead257a13') in 0.029861 seconds 
+  Time since last request: 0.001056 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_44TerrainData.asset.asset
+  artifactKey: Guid(a78b04c1d2681b84eb4429e6e848583a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_44TerrainData.asset.asset using Guid(a78b04c1d2681b84eb4429e6e848583a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: 'ede48f246a4f98d60192aa7d52ab8492') in 0.082224 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 27.359095 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6dc8c20988857723e656efb15756589') in 0.030941 seconds 
+  Time since last request: 0.000922 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_88TerrainData.asset
+  artifactKey: Guid(67c7fd4ed76575949b04b732bcac4fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_88TerrainData.asset using Guid(67c7fd4ed76575949b04b732bcac4fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: 'c6c1e34796b89b93290ba75eb6216bee') in 0.073676 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.360249 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c8343fa1d4b2a5125644e8916eae83') in 0.020342 seconds 
+  Time since last request: 0.000933 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_ff4b5190-b520-4d46-b960-ee1d0967df26.asset
+  artifactKey: Guid(3349f3f4495a62f40895e095545b535e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_ff4b5190-b520-4d46-b960-ee1d0967df26.asset using Guid(3349f3f4495a62f40895e095545b535e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '414b7246f3948dad79f89a43a4035b69') in 0.067963 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.419563 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf4f33a7f5e6f82b5294712c87a2cd9f') in 0.026036 seconds 
+  Time since last request: 0.000941 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_98TerrainData.asset
+  artifactKey: Guid(a6f7b9550ac9bd3429a135a8feb7e23b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_98TerrainData.asset using Guid(a6f7b9550ac9bd3429a135a8feb7e23b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: '758628cf7d4fea8d4c43a609f6c5729b') in 0.081800 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.469794 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e08e7b7a6cbaf94c4cdc7e0ee60048d2') in 0.029644 seconds 
+  Time since last request: 0.001051 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_445999c2-5240-4b5c-9394-4cacb62d7eec.asset
+  artifactKey: Guid(1587ce82db2499e4185b7701bf0d532b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/TerrainData_445999c2-5240-4b5c-9394-4cacb62d7eec.asset using Guid(1587ce82db2499e4185b7701bf0d532b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5189acc555e008b4f9057342a77fdbb') in 0.055031 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.985621 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fe9dfa7a96ee0fe82bb3dbf36c78741') in 0.029411 seconds 
+  Time since last request: 0.000902 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_17TerrainData.asset
+  artifactKey: Guid(8e0e58b0b28bfe84aad04b4e4a5dd308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_17TerrainData.asset using Guid(8e0e58b0b28bfe84aad04b4e4a5dd308) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: 'b8a7db3918feef0a398ddef93e7c5d56') in 0.048292 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.605166 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db2d218669b2f0a2640e856611b22437') in 0.028646 seconds 
+  Time since last request: 0.000661 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_d3TerrainData.asset
+  artifactKey: Guid(bd2dfe4c60f313349888062cf4edeaed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_d3TerrainData.asset using Guid(bd2dfe4c60f313349888062cf4edeaed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: 'b3fdc591f1c44d82ee4b9a1dc9b5b995') in 0.048997 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.495572 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '279520a24b6d6a7737595ce7c29f1d10') in 0.027601 seconds 
+  Time since last request: 0.000676 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_c82TerrainData.asset.asset
+  artifactKey: Guid(157c0b2aff5569e44b9c85a80af59c3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/3_c82TerrainData.asset.asset using Guid(157c0b2aff5569e44b9c85a80af59c3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: '9c0cfaf79af161537c65b3f1a39bf105') in 0.050603 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.794802 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cbc4fbe6040163bdeed86d5e309d3df') in 0.022040 seconds 
+  Time since last request: 0.000635 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_83TerrainData.asset
+  artifactKey: Guid(ae5ebbb02c6e16e46add0fc9b5dca3fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_83TerrainData.asset using Guid(ae5ebbb02c6e16e46add0fc9b5dca3fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: '8c4431a908bcb553cb90a11052c09f2a') in 0.050144 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.417575 seconds.
-  path: Assets/Materials/Boundaries.mat
-  artifactKey: Guid(60a18ab087e16bc41935b9892690278d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Boundaries.mat using Guid(60a18ab087e16bc41935b9892690278d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b404f0cc46c3a6b8ad3f4c361bf64e7e') in 0.107815 seconds 
+  Time since last request: 0.000653 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_ffTerrainData.asset
+  artifactKey: Guid(69d8e4dcd145d694f99456d28b4a0acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Terrain/2_ffTerrainData.asset using Guid(69d8e4dcd145d694f99456d28b4a0acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree PT_Pine_Tree_03_dead_cut must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree PT_Pine_Tree_03_stump must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ -> (artifact id: '70919e4f291059667df4ffdef006875d') in 0.047607 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.627018 seconds.
-  path: Assets/Materials/Can
-  artifactKey: Guid(9f139dd9d80c0f843bca8c70cfe68a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Can using Guid(9f139dd9d80c0f843bca8c70cfe68a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fe5517617ee6260ea39cedec3aa1d28') in 0.006268 seconds 
+  Time since last request: 1082.203512 seconds.
+  path: Assets/Scenes/Abel
+  artifactKey: Guid(54f67fa6bbfbc3e49975bce5827bbbe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Abel using Guid(54f67fa6bbfbc3e49975bce5827bbbe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edcbb2aa9b0286308eaa8fd723a82f67') in 0.008903 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.300707 seconds.
-  path: Assets/Materials/Can/Hole.mat
-  artifactKey: Guid(a3b442363c963204e9af412d2b449356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Can/Hole.mat using Guid(a3b442363c963204e9af412d2b449356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ccb479bf0dfe9f8000171dd64704c43') in 0.036199 seconds 
+  Time since last request: 2.093992 seconds.
+  path: Assets/Scenes/Abel/Testing.unity
+  artifactKey: Guid(d98a5390b574a54468a449b7c2bd7ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Abel/Testing.unity using Guid(d98a5390b574a54468a449b7c2bd7ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1c3e8996a94008ff43110f4f1460aa0') in 0.009286 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.665428 seconds.
-  path: Assets/Materials/Can/Hole_M.mat
-  artifactKey: Guid(a3b442363c963204e9af412d2b449356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Can/Hole_M.mat using Guid(a3b442363c963204e9af412d2b449356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd00f582e00212c33ee72745b6698c781') in 0.034800 seconds 
+  Time since last request: 7.772539 seconds.
+  path: Assets/Scenes/Abel/Hub.unity
+  artifactKey: Guid(1aa9bf211ecc5824191b42fa4a3f51a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Abel/Hub.unity using Guid(1aa9bf211ecc5824191b42fa4a3f51a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '434d8b61c50df247a76b8ca10a7eca9d') in 0.008097 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 35.274612 seconds.
-  path: Assets/Materials/Can/Aluminium_M.mat
-  artifactKey: Guid(b85cce637ecd6194a9e21380b39cd40c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Can/Aluminium_M.mat using Guid(b85cce637ecd6194a9e21380b39cd40c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66508f65b95dbce658e527fd91262d34') in 0.032343 seconds 
+  Time since last request: 46.733125 seconds.
+  path: Assets/Scenes/MainScene.unity
+  artifactKey: Guid(b9c7ece0555edb94b958345e911d9b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainScene.unity using Guid(b9c7ece0555edb94b958345e911d9b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c597ecd6efff46860a6035422d515713') in 0.009952 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 47.646092 seconds.
-  path: Assets/Materials/Can/Main_M.mat
-  artifactKey: Guid(309bc35237b22504886b2cd996ed0fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Can/Main_M.mat using Guid(309bc35237b22504886b2cd996ed0fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb9071bb927a4e98c6fc91beaeb405e') in 0.031752 seconds 
+  Time since last request: 5.109952 seconds.
+  path: Assets/Scenes/MatteoScene.unity
+  artifactKey: Guid(61eec03ec2bb29341aa203cf012e8abc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MatteoScene.unity using Guid(61eec03ec2bb29341aa203cf012e8abc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd9bd4ad5583a9adf3e2fccba79f7779') in 0.008082 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 438.140578 seconds.
-  path: Assets/Materials/Can/Cap_M.mat
-  artifactKey: Guid(d2741a31dcbc90e41bbdcb0f9180b7d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Can/Cap_M.mat using Guid(d2741a31dcbc90e41bbdcb0f9180b7d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ab6e1c1685a768b2e7b330107cd1172') in 0.034906 seconds 
+  Time since last request: 364.575547 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/Models/PushButton.fbx
+  artifactKey: Guid(7ab6f3b0fd1a6ba41b2a47766c16613f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/Models/PushButton.fbx using Guid(7ab6f3b0fd1a6ba41b2a47766c16613f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '092cfdfcfa5d0ba4eddbdd21ed7c6fed') in 0.163582 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 120.685082 seconds.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Materials/Sign_Ms/SignBorder_M.mat
+  artifactKey: Guid(21ea0fd03a85c6d468e91f451d040f8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Sign_Ms/SignBorder_M.mat using Guid(21ea0fd03a85c6d468e91f451d040f8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1593413a6edd445dda53170287cfcb8') in 0.029581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.450065 seconds.
+  path: Assets/Materials/Room_M.mat
+  artifactKey: Guid(e5f5e9fb6f452934485c8fe270039344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Room_M.mat using Guid(e5f5e9fb6f452934485c8fe270039344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '969f1d0a8ba7172d314b2b89c41b0da4') in 0.013876 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Materials/Sign_Ms/SeaSignBackground_M.mat
+  artifactKey: Guid(342606dddbbf02d43855b3cf281ccec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Sign_Ms/SeaSignBackground_M.mat using Guid(342606dddbbf02d43855b3cf281ccec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68d53ccd07eefa0a4c132cc839455dc1') in 0.091325 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.896605 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Terrain_mat.mat
+  artifactKey: Guid(48c26796e9175d14a9b2eccded92bb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Terrain_mat.mat using Guid(48c26796e9175d14a9b2eccded92bb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb4b79890852c6808a13cc4af6c03e57') in 0.021949 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Water_mat.mat
+  artifactKey: Guid(3e36df56c6fa5f64085c14d9d4f6f8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Water_mat.mat using Guid(3e36df56c6fa5f64085c14d9d4f6f8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15ab1aff013b6fe5990c6090db056d9d') in 0.021351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.766334 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Rocks_mat.mat
+  artifactKey: Guid(93415edde47040648869ae6638d33ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Rocks_mat.mat using Guid(93415edde47040648869ae6638d33ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4621fe19d475d9bc543196f02432eab') in 0.032736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Skybox_mat.mat
+  artifactKey: Guid(59573b088aaea0442bf29e0a0e9d1339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Skybox_mat.mat using Guid(59573b088aaea0442bf29e0a0e9d1339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6ea0105a1a329b10dc6b0f1abce4853') in 0.062892 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Pine_Tree_Trunk_Mat.mat
+  artifactKey: Guid(f43a7dc4f39c5654a8211b83259e32a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Pine_Tree_Trunk_Mat.mat using Guid(f43a7dc4f39c5654a8211b83259e32a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca14d0e5d7eebef9057386a21a9a51ed') in 0.035421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000612 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Poppy_mat.mat
+  artifactKey: Guid(67c85a5a0248e2a4a98e653c8e7eeb9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Poppy_mat.mat using Guid(67c85a5a0248e2a4a98e653c8e7eeb9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90f0eee2995854879c33c2b1e2b63f1a') in 0.045162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.121289 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Mushrooms_mat.mat
+  artifactKey: Guid(c522ec7c62be0c145bc320ad11705a67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Mushrooms_mat.mat using Guid(c522ec7c62be0c145bc320ad11705a67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef5191bdb552e41f7c595eaed1f971e6') in 0.018643 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Pine_Tree_Leaves_Mat.mat
+  artifactKey: Guid(823cb446423dd7747b7454d5cf133e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Pine_Tree_Leaves_Mat.mat using Guid(823cb446423dd7747b7454d5cf133e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cabb70db59dad6ebdb3e54adebac2ca4') in 0.024155 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.348472 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Materials/PT_Medieval_mat.mat
+  artifactKey: Guid(bb37e935cca327247aa85f512def0e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Materials/PT_Medieval_mat.mat using Guid(bb37e935cca327247aa85f512def0e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de9b05f364e37578c270a77e5280058b') in 0.043973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001592 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Grass_Mat.mat
+  artifactKey: Guid(09473d06882d1414b84b1fdb7a095516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Grass_Mat.mat using Guid(09473d06882d1414b84b1fdb7a095516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2de57955aca44f4fe14ca87511d5575') in 0.047149 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000366 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Village/Sources/Materials/PT_mat.mat
+  artifactKey: Guid(56532089e45dbc1479865e115cc8c637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Village/Sources/Materials/PT_mat.mat using Guid(56532089e45dbc1479865e115cc8c637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4035c45983443bb0f7545fb38b9a6ba3') in 0.033972 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.600168 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/PT_Generic_Tree_Leaves_mat 2.mat
+  artifactKey: Guid(40e61747f5ab72d409498dd1603b8289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/PT_Generic_Tree_Leaves_mat 2.mat using Guid(40e61747f5ab72d409498dd1603b8289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d0cc62adca32efef360c305977a39c8') in 0.201566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Generic_Tree_Trunk_mat.mat
+  artifactKey: Guid(e6ce4253a748b0849a04b87f33cc539d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Generic_Tree_Trunk_mat.mat using Guid(e6ce4253a748b0849a04b87f33cc539d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '691d34406f1fc3cd3811a72c0af510d8') in 0.027215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.127461 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Generic_Tree_Leaves_mat.mat
+  artifactKey: Guid(066ded06e6a8eb240893ea7b8efb66b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Generic_Tree_Leaves_mat.mat using Guid(066ded06e6a8eb240893ea7b8efb66b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb65788a3ea1dc63ec5761cde85f9779') in 0.038506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001427 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Fruit_Tree_Opaque_mat.mat
+  artifactKey: Guid(3922c043c1c52cb47a7b1bfed562a4b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Fruit_Tree_Opaque_mat.mat using Guid(3922c043c1c52cb47a7b1bfed562a4b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d8ccfc19ffa3ac01c3c7375edbc9cc0') in 0.021295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000358 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Generic_Leaf_mat.mat
+  artifactKey: Guid(aac20e0005fef5248bc0774a19a05e87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Generic_Leaf_mat.mat using Guid(aac20e0005fef5248bc0774a19a05e87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c15a643d09069309ae6de8eb92fc039') in 0.308812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.067629 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Village/Sources/Materials/PT_Buildings_mat.mat
+  artifactKey: Guid(d55b08511377b684395dab1b9fba6a16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Village/Sources/Materials/PT_Buildings_mat.mat using Guid(d55b08511377b684395dab1b9fba6a16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70c9c183e085c191664282bdb81016ef') in 0.030525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000395 seconds.
+  path: Assets/Materials/Object_M.mat
+  artifactKey: Guid(42389a2cf0b6c134f8f0fd60017ad7ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Object_M.mat using Guid(42389a2cf0b6c134f8f0fd60017ad7ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aacd9d2675dd5a7d9e95c3c30aa4c04') in 0.024975 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000513 seconds.
+  path: Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Fruit_Tree_Foliage_Mat.mat
+  artifactKey: Guid(0a1f44318dd467a45bfef81ad0e8855a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio/Lowpoly_Environments/Sources/Materials/PT_Fruit_Tree_Foliage_Mat.mat using Guid(0a1f44318dd467a45bfef81ad0e8855a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28bc24021320c15b7c950efc95d0572a') in 0.049897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000455 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/Models/XRControllerRight.fbx
+  artifactKey: Guid(11cd62256b1d470f922b2c8e6446cc77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/Models/XRControllerRight.fbx using Guid(11cd62256b1d470f922b2c8e6446cc77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7618c4ffd155fe11e787021d4ac40852') in 0.087190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/Models/XRControllerLeft.fbx
+  artifactKey: Guid(be3083a5f26d4e859d594ecbe632f87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/Models/XRControllerLeft.fbx using Guid(be3083a5f26d4e859d594ecbe632f87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8492dd6c479421c6c2cf19689c03363') in 0.086110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.084978 seconds.
   path: Assets/Mountain/MountainFREE.mat
   artifactKey: Guid(f125eab1c5090db4ba50a818ca1e9534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mountain/MountainFREE.mat using Guid(f125eab1c5090db4ba50a818ca1e9534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '861e85bcf9afc18e7b0f39ab7df2cc75') in 0.096409 seconds 
+Start importing Assets/Mountain/MountainFREE.mat using Guid(f125eab1c5090db4ba50a818ca1e9534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '861e85bcf9afc18e7b0f39ab7df2cc75') in 0.022227 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000647 seconds.
-  path: Assets/Mountain/MountainFREE.prefab
-  artifactKey: Guid(9e79f0d07765b0240943ad7ded0e4e0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mountain/MountainFREE.prefab using Guid(9e79f0d07765b0240943ad7ded0e4e0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '005736130c14c8736b38a48b12030bca') in 0.095842 seconds 
+  Time since last request: 0.000425 seconds.
+  path: Assets/Materials/Sign_Ms/MountainSignBackground_M.mat
+  artifactKey: Guid(5a12422e821b7074e84e769a470a3708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Sign_Ms/MountainSignBackground_M.mat using Guid(5a12422e821b7074e84e769a470a3708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83a1d594cfc33cd6d235549ba7c5f42f') in 0.020171 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.073659 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7855f4e0db453029bbcd845456adc96') in 0.034832 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.021680 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 7 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.202 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1203ms)
-		BeginReloadAssembly (155ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (972ms)
-			LoadAssemblies (137ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (319ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (43ms)
-			SetupLoadedEditorAssemblies (381ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (78ms)
-				ProcessInitializeOnLoadAttributes (266ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (2ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.15 ms, found 7 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2685 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 182.1 MB.
-System memory in use after: 182.3 MB.
-
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3193.
-Total: 4.770600 ms (FindLiveObjects: 0.406300 ms CreateObjectMapping: 0.198600 ms MarkObjects: 4.113900 ms  DeleteObjects: 0.049900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 0.292737 seconds.
+  path: Assets/Mountain/Mesh/Mesher_LOD4.obj
+  artifactKey: Guid(44dc0f826b723db4180d7b9ed0a89fcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mountain/Mesh/Mesher_LOD4.obj using Guid(44dc0f826b723db4180d7b9ed0a89fcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7589a6ee81fdd4644a2b03f34de4b3c7') in 0.042841 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 613.377280 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6bec29044136acb6da46a6072dec7a7') in 0.106423 seconds 
+  Time since last request: 0.000326 seconds.
+  path: Assets/Mountain/Mesh/Mesher_LOD3.obj
+  artifactKey: Guid(bc970c72e8cea0f468d5535d8a6615b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mountain/Mesh/Mesher_LOD3.obj using Guid(bc970c72e8cea0f468d5535d8a6615b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdcdcb2dd9f7f8d7aa65da41fd8bbf0e') in 0.032591 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.916269 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ed0b15e4f005dd3385ea7bace78a22e') in 0.027764 seconds 
+  Time since last request: 0.000267 seconds.
+  path: Assets/Mountain/Mesh/Mesher_LOD2.obj
+  artifactKey: Guid(214aa6ba866b7c349b381476772a46ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mountain/Mesh/Mesher_LOD2.obj using Guid(214aa6ba866b7c349b381476772a46ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01cfed1779dc5876edfb4295e3df519d') in 0.047449 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.810644 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb4f6a540c000c81198321bc2e321375') in 0.029667 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.609717 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04549d211abf149388aee863c3f32b83') in 0.030516 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.966977 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c068a98e9fd3092f54f5a9309e6dee24') in 0.031631 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 418.023835 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '989bb18651198fa2ad6c984bbf74a77b') in 0.021921 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.188767 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26a65b20ad1c0626eb081e839ed8ca8c') in 0.025652 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.818970 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2fbd85042c41bc67a0bf61f46256091') in 0.019620 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.484415 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df81cef47f9d0f815903b270662d70c6') in 0.021617 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.590431 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5253ccaf33f0fd1a76febc9a6db7c40a') in 0.026548 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.431315 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9de84146c202c5e053fbbe0ebaf0247') in 0.028509 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.446174 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '616b8f1956c1abef26e6de40edc7cc35') in 0.036463 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.974801 seconds.
-  path: Assets/Materials/Cigaret
-  artifactKey: Guid(ef3be968954cc774ea601d66a2d06e83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Cigaret using Guid(ef3be968954cc774ea601d66a2d06e83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f7ee65377c427f7e1ecadbf449c97d1') in 0.005517 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 20.476512 seconds.
-  path: Assets/Materials/Cigaret/Ash_M.mat
-  artifactKey: Guid(bd7d9bc2d0200d54696be6412b507aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Cigaret/Ash_M.mat using Guid(bd7d9bc2d0200d54696be6412b507aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '234b3a8457aa3004b3dc56650f01f742') in 0.050408 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 194.927849 seconds.
-  path: Assets/Materials/Cigaret/Body_M.mat
-  artifactKey: Guid(fa5b6e9ceaaca8f48b9e368d17410179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Cigaret/Body_M.mat using Guid(fa5b6e9ceaaca8f48b9e368d17410179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1e03ae381ca4d963663fa7db56cab90') in 0.037611 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 99.359417 seconds.
-  path: Assets/Materials/Cigaret/Filter_M.mat
-  artifactKey: Guid(2903d0267df09694eb039548b1bf016f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Cigaret/Filter_M.mat using Guid(2903d0267df09694eb039548b1bf016f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '458d4c67fcd2f8428be19d8306c41942') in 0.035902 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 67.941688 seconds.
-  path: Assets/Materials/Cigaret/Ash_M.mat
-  artifactKey: Guid(bd7d9bc2d0200d54696be6412b507aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Cigaret/Ash_M.mat using Guid(bd7d9bc2d0200d54696be6412b507aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66fbe42f4992420bd4816ead207a6a7f') in 0.045516 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000768 seconds.
-  path: Assets/Materials/Cigaret/Body_M.mat
-  artifactKey: Guid(fa5b6e9ceaaca8f48b9e368d17410179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Cigaret/Body_M.mat using Guid(fa5b6e9ceaaca8f48b9e368d17410179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f299faea83232c48121074b3461ed3c') in 0.027509 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000664 seconds.
-  path: Assets/Materials/Cigaret/Filter_M.mat
-  artifactKey: Guid(2903d0267df09694eb039548b1bf016f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Cigaret/Filter_M.mat using Guid(2903d0267df09694eb039548b1bf016f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ade9f8b25680387ae8b3ddf57eb8fdec') in 0.028132 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 69.802917 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3fc3b3301d3a384afce445ee8bb179d') in 0.032772 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 561.490073 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c177d6ea0b4aeea4444e6f5001775da0') in 0.040681 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.450435 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b578fe52d4023361473e67dc6ee9c8f') in 0.023522 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.116846 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f6d8d40b510da8fad55c2871a6ebcb4') in 0.067581 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 32.947013 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd707001786a39af710d09add7d466e39') in 0.022511 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.154083 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6025a37a3a60140a447445298314e06') in 0.025531 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 26.979222 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1720cab2deef8afff1d154111e8c8d8') in 0.026510 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.045171 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c26da850503d3fe3f2841764f5656b7d') in 0.021570 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.248971 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5568ca67f697a1e234c1b0987fe404a') in 0.023810 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.037021 seconds.
-  path: Assets/Prefabs/Cigaret.prefab
-  artifactKey: Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cigaret.prefab using Guid(8bf44b6cb89e53a47be4d8807ea6217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5634508a4433f1b86be44cea0ea8c25') in 0.025034 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 53.962295 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95612201eed816439288ba912c5d353b') in 0.026427 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.071473 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '811a1d606e37dc214b4d3da9edb44cb4') in 0.029365 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.482305 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1d6066324569805a971451d58e35c30') in 0.028853 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.963720 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f06aabd7091d80bd9a2d1e337fde9b9') in 0.025969 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.166662 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7398de343ff5152eed16d6e0e9cb0b01') in 0.020000 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.706280 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07dd64c4247666e40c166f4c7a1f7076') in 0.024982 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.827300 seconds.
-  path: Assets/Prefabs/Can.prefab
-  artifactKey: Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Can.prefab using Guid(84dc135b5536f5842bb40c1829197165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dd41f392ffce8fd317ab6c87c404b9e') in 0.031782 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.042430 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 7 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.345 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1346ms)
-		BeginReloadAssembly (241ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (101ms)
-		EndReloadAssembly (1029ms)
-			LoadAssemblies (163ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (342ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (390ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (81ms)
-				ProcessInitializeOnLoadAttributes (270ms)
-				ProcessInitializeOnLoadMethodAttributes (17ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (2ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.90 ms, found 7 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2685 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 182.2 MB.
-System memory in use after: 182.4 MB.
-
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3198.
-Total: 4.280600 ms (FindLiveObjects: 0.344100 ms CreateObjectMapping: 0.101600 ms MarkObjects: 3.790700 ms  DeleteObjects: 0.042700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.051524 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 7 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.686 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1686ms)
-		BeginReloadAssembly (337ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (55ms)
-		EndReloadAssembly (1234ms)
-			LoadAssemblies (434ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (371ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (423ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (85ms)
-				ProcessInitializeOnLoadAttributes (287ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (2ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.90 ms, found 7 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2685 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 182.2 MB.
-System memory in use after: 182.4 MB.
-
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 3202.
-Total: 4.515600 ms (FindLiveObjects: 0.408200 ms CreateObjectMapping: 0.178300 ms MarkObjects: 3.890100 ms  DeleteObjects: 0.037100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 0.000349 seconds.
+  path: Assets/Mountain/Mesh/Mesher.obj
+  artifactKey: Guid(a21595d8bad6c80488d17c1215cf3238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mountain/Mesh/Mesher.obj using Guid(a21595d8bad6c80488d17c1215cf3238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1216f8e9cda96f8bf70e01c22139bb96') in 0.056572 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
