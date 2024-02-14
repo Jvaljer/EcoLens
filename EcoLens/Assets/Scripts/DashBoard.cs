@@ -72,6 +72,7 @@ public class DashBoard : MonoBehaviour {
                 info_pane.transform.GetComponent<TextMesh>().text = "The object you grabbed is a simple capsule";
                 break;
             default:
+                info_pane.transform.GetComponent<TextMesh>().text = "Object:["+obj+"] hasn't been implemented yet";
                 break;
         }
     }
