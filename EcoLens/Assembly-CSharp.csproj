@@ -48,7 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Detector.cs" />
-     <Compile Include="Assets\Scripts\CapsuleWall.cs" />
+     <Compile Include="Assets\Bin.cs" />
      <Compile Include="Assets\Scripts\BackDoor.cs" />
      <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\MouseLook.cs" />
      <Compile Include="Assets\Scripts\DoorDetectors.cs" />
