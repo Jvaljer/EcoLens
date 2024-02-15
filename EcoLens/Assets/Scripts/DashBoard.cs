@@ -15,6 +15,17 @@ public class DashBoard : MonoBehaviour {
     public Transform slot2;
     public Transform slot3;
 
+    public GameObject cigaret;
+    public GameObject drink;
+    public GameObject foodwrapper;
+    public GameObject pbottle;
+    public GameObject tire;
+    public GameObject papertowel;
+    public GameObject can;
+    public GameObject gbottle;
+    public GameObject trashbag;
+    private Dictionary<string, int> objects;
+
     private string current_time = "present";
 
     public void ButtonHoverEnter(GameObject btn){
@@ -59,21 +70,72 @@ public class DashBoard : MonoBehaviour {
         o2.transform.position = slot2.position;
         o3.transform.position = slot3.position;
     }
+    public void AddObjects(string o1, string o2, string o3){
+        objects = new Dictionary<string, int>();
+        objects.Add(o1, 1);
+        objects.Add(o2, 1);
+        objects.Add(o3, 1);
+    }
 
     public void DisplayInformations(string obj){
         switch (obj){
             case "test-cube":
                 info_pane.text = "The object you grabbed is the testing cube";
                 break;
-            case "test-circle":
-                info_pane.transform.GetComponent<TextMesh>().text = "The object you grabbed is a purple sphere";
-                break;
-            case "test-capsule":
-                info_pane.transform.GetComponent<TextMesh>().text = "The object you grabbed is a simple capsule";
-                break;
             default:
-                info_pane.transform.GetComponent<TextMesh>().text = "Object:["+obj+"] hasn't been implemented yet";
+                info_pane.text = "Object:["+obj+"] hasn't been implemented yet";
                 break;
+        }
+    }
+    public void SpawnObject(string obj){
+        Debug.Log("SPAAAAWN");
+        //here we might wanna bound the amount of spawned objects (present in the same time in the scene)
+        if(objects[obj]>=10){
+            //here we wanna display a message saying that no more object of this type will be created while existing in scene
+            return;
+        }
+        GameObject new_obj;
+        switch (obj){
+            //forest object case
+            case "plastic-bottle":
+                new_obj = Instantiate(pbottle, slot1.position, slot1.rotation);
+                break;
+            case "tire":
+                new_obj = Instantiate(tire, slot2.position, slot2.rotation);
+                break;
+            case "paper-towel":
+                new_obj = Instantiate(papertowel, slot3.position, slot3.rotation);
+                break;
+
+            //mountain object case
+            case "cigaret":
+                new_obj = Instantiate(cigaret, slot1.position, slot1.rotation);
+                break;
+            case "drink":
+                new_obj = Instantiate(drink, slot3.position, slot3.rotation);
+                break;
+            case "food-wrapper":
+                new_obj = Instantiate(foodwrapper, slot2.position, slot2.rotation);
+                break;
+            
+            //sea object case
+            case "can":
+                new_obj = Instantiate(can, slot1.position, slot1.rotation);
+                break;
+            case "glass-bottle":
+                new_obj = Instantiate(gbottle, slot2.position, slot2.rotation);
+                break;
+            case "plastic-bag":
+                new_obj = Instantiate(trashbag, slot3.position, slot3.rotation);
+                break;
+            
+            default:
+                new_obj = null;
+                break;
+        }
+        if(new_obj!=null){
+            objects[obj]++;
+            new_obj.transform.GetComponent<Object>().Initiate(this);
         }
     }
 }

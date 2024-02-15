@@ -27,6 +27,7 @@ public class Mountain : MonoBehaviour {
 
         player.transform.position = spawn.position;
 
+        dashboard_script.AddObjects(obj1.transform.GetComponent<Object>().obj_type, obj2.transform.GetComponent<Object>().obj_type, obj3.transform.GetComponent<Object>().obj_type);
         dashboard_script.PlaceObjects(obj1, obj2, obj3);
     }
 }

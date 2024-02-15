@@ -8,19 +8,24 @@ public class Object : MonoBehaviour {
     private bool placed = false;
     private bool dropped = false;
     private bool in_capsule = true;
-    private GameObject holder;
+    private bool held = true;
+    private bool spawned = false;
     public string obj_type;
 
     void Update(){
-        if(placed){
-            gameObject.transform.position = holder.transform.position;
-        }
         if(dropped){
+            if(!held){
+                Debug.Log("We wanna spawn a new one !");
+                //here we wanna spawn a new object of same type in the holder (correlated spawn point)
+                if(!spawned){
+                    dashboard.SpawnObject(obj_type);
+                    spawned = true;
+                }
+            }
             //then we wanna know if it was dropped inside or outside
             //for that we have 2 options
                 //adding an "in" collider for the capsule and checking if there is a triggering or not
                 //checking for positions
-            
         }
     }
 
@@ -33,19 +38,16 @@ public class Object : MonoBehaviour {
         dashboard.DisplayInformations(obj_type);
         dropped = true;
     }
-    public void TakeOut(){
-        in_capsule = false;
-    }
-    public void BringIn(){
-        in_capsule = true;
+
+    public void OnHolder(){
+        held = true;
     }
 
-    public void SetHolder(GameObject go){
-        holder = go;
-        placed = true;
+    public void OffHolder(){
+        held = false;
     }
-    public void DismissHolder(){
-        holder = null;
-        placed = false;
+
+    public void Initiate(DashBoard script){
+        dashboard = script;
     }
 }
