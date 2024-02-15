@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Object : MonoBehaviour {
     public DashBoard dashboard;
+    public Transform capsule;
     
     private bool placed = false;
     private bool dropped = false;
     private bool in_capsule = true;
     private bool held = true;
     private bool spawned = false;
+    private bool trash = false;
     public string obj_type;
 
     void Update(){
         if(dropped){
+            if(trash){
+                Destroy(gameObject);
+                dashboard.ThrowInBin(obj_type);
+            }
             if(!held){
                 Debug.Log("We wanna spawn a new one !");
                 //here we wanna spawn a new object of same type in the holder (correlated spawn point)
@@ -26,6 +32,7 @@ public class Object : MonoBehaviour {
             //for that we have 2 options
                 //adding an "in" collider for the capsule and checking if there is a triggering or not
                 //checking for positions
+            float x_dist = gameObject.transform.position.x - capsule.position.x;
         }
     }
 
@@ -45,6 +52,13 @@ public class Object : MonoBehaviour {
 
     public void OffHolder(){
         held = false;
+    }
+
+    public void OnTrash(){
+        trash = true;
+    }
+    public void OffTrash(){
+        trash = false;
     }
 
     public void Initiate(DashBoard script){

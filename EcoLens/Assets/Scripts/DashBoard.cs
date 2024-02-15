@@ -138,4 +138,8 @@ public class DashBoard : MonoBehaviour {
             new_obj.transform.GetComponent<Object>().Initiate(this);
         }
     }
+
+    public void ThrowInBin(string obj){
+        //must implement
+    }
 }
