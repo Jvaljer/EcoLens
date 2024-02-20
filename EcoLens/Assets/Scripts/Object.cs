@@ -4,23 +4,41 @@ using UnityEngine;
 
 public class Object : MonoBehaviour {
     public DashBoard dashboard;
+    public Transform capsule;
     
     private bool placed = false;
     private bool dropped = false;
     private bool in_capsule = true;
-    private GameObject holder;
+    private bool init = false;
+    private bool counted_out = false;
     public string obj_type;
 
     void Update(){
-        if(placed){
-            gameObject.transform.position = holder.transform.position;
-        }
+        if(!init) return;
         if(dropped){
             //then we wanna know if it was dropped inside or outside
             //for that we have 2 options
                 //adding an "in" collider for the capsule and checking if there is a triggering or not
                 //checking for positions
             
+            float dx = Mathf.Abs(gameObject.transform.position.x - capsule.position.x);
+            float dy = Mathf.Abs(gameObject.transform.position.y - capsule.position.y);
+            float dz = Mathf.Abs(gameObject.transform.position.z - capsule.position.z);
+            if(dx>5f || dz>5f || dy>5f){
+                Debug.Log("in_capsule -> False");
+                in_capsule = false;
+                if(!counted_out){
+                    dashboard.ObjectOut();
+                    counted_out = true;
+                }
+            } else {
+                Debug.Log("in_capsule -> True");
+                in_capsule = true;
+                if(counted_out){
+                    dashboard.ObjectIn();
+                    counted_out = false;
+                }
+            }
         }
     }
 
@@ -33,19 +51,16 @@ public class Object : MonoBehaviour {
         dashboard.DisplayInformations(obj_type);
         dropped = true;
     }
-    public void TakeOut(){
-        in_capsule = false;
-    }
-    public void BringIn(){
-        in_capsule = true;
+
+    public void Initiate(DashBoard script, Transform boundaries){
+        dashboard = script;
+        capsule = boundaries;
+        init = true;
     }
 
-    public void SetHolder(GameObject go){
-        holder = go;
-        placed = true;
-    }
-    public void DismissHolder(){
-        holder = null;
-        placed = false;
+    private void OnDestroy(){
+        if(counted_out){
+            dashboard.ObjectIn();
+        }
     }
 }
