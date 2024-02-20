@@ -9,6 +9,7 @@ TagManager:
   - Detect_Sea
   - Object
   - Environment
+  - Placeholder
   layers:
   - Default
   - TransparentFX

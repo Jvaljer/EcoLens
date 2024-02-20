@@ -5,6 +5,8 @@ using TMPro;
 
 public class DashBoard : MonoBehaviour {
     public TMP_Text info_pane;
+    public TMP_Text bin_pane;
+    public TMP_Text out_pane;
 
     public GameObject room;
     private GameObject environment;
@@ -14,6 +16,9 @@ public class DashBoard : MonoBehaviour {
     public Transform slot1;
     public Transform slot2;
     public Transform slot3;
+    public GameObject btn1;
+    public GameObject btn2;
+    public GameObject btn3;
 
     public GameObject cigaret;
     public GameObject drink;
@@ -24,6 +29,13 @@ public class DashBoard : MonoBehaviour {
     public GameObject can;
     public GameObject gbottle;
     public GameObject trashbag;
+
+    private int out_cpt = 0;
+    private int bin_cpt = 0;
+
+    private bool win = false;
+    private bool loose = false;
+
     private Dictionary<string, int> objects;
 
     private string current_time = "present";
@@ -69,12 +81,24 @@ public class DashBoard : MonoBehaviour {
         o1.transform.position = slot1.position;
         o2.transform.position = slot2.position;
         o3.transform.position = slot3.position;
+
+        o1.transform.GetComponent<Object>().Initiate(this);
+        o2.transform.GetComponent<Object>().Initiate(this);
+        o3.transform.GetComponent<Object>().Initiate(this);
+
+        btn1.transform.GetComponent<SpawnBtn>().SetObject(o1.transform.GetComponent<Object>().obj_type);
+        btn2.transform.GetComponent<SpawnBtn>().SetObject(o2.transform.GetComponent<Object>().obj_type);
+        btn3.transform.GetComponent<SpawnBtn>().SetObject(o3.transform.GetComponent<Object>().obj_type);
+
+        out_cpt = 0;
+        out_pane.text = "Objects Out -> "+out_cpt+"/10";
     }
     public void AddObjects(string o1, string o2, string o3){
         objects = new Dictionary<string, int>();
         objects.Add(o1, 1);
         objects.Add(o2, 1);
         objects.Add(o3, 1);
+
     }
 
     public void DisplayInformations(string obj){
@@ -87,59 +111,85 @@ public class DashBoard : MonoBehaviour {
                 break;
         }
     }
-    public void SpawnObject(string obj){
-        Debug.Log("SPAAAAWN");
-        //here we might wanna bound the amount of spawned objects (present in the same time in the scene)
-        if(objects[obj]>=10){
-            //here we wanna display a message saying that no more object of this type will be created while existing in scene
-            return;
-        }
-        GameObject new_obj;
-        switch (obj){
-            //forest object case
-            case "plastic-bottle":
-                new_obj = Instantiate(pbottle, slot1.position, slot1.rotation);
-                break;
-            case "tire":
-                new_obj = Instantiate(tire, slot2.position, slot2.rotation);
-                break;
-            case "paper-towel":
-                new_obj = Instantiate(papertowel, slot3.position, slot3.rotation);
-                break;
+    private void DisplayLoose(){
+        //must implement
+    }
+    private void DisplayWin(){
+        //must implement
+    }
 
-            //mountain object case
+    public void ThrowInBin(){
+        bin_cpt++;
+        if(bin_cpt==10 && !loose){
+            TravelToPast();
+            DisplayWin();
+            win = true;
+        }
+        bin_pane.text = bin_cpt+"/10";
+    }
+
+    public void SpawnObject(string obj_str){
+        GameObject go;
+        switch (obj_str){
+            //mountain objects
             case "cigaret":
-                new_obj = Instantiate(cigaret, slot1.position, slot1.rotation);
+                go = Instantiate(cigaret, slot1.position, slot1.rotation);
                 break;
             case "drink":
-                new_obj = Instantiate(drink, slot3.position, slot3.rotation);
+                go = Instantiate(drink, slot3.position, slot3.rotation);
                 break;
             case "food-wrapper":
-                new_obj = Instantiate(foodwrapper, slot2.position, slot2.rotation);
+                go = Instantiate(foodwrapper, slot2.position, slot2.rotation);
                 break;
             
-            //sea object case
+            //forest objects
+            case "plastic-bottle":
+                go = Instantiate(pbottle, slot1.position, slot1.rotation);
+                break;
+            case "tire":
+                go = Instantiate(tire, slot2.position, slot2.rotation);
+                break;
+            case "paper-towel":
+                go = Instantiate(papertowel, slot3.position, slot3.rotation);
+                break;
+            
+            //sea objects
             case "can":
-                new_obj = Instantiate(can, slot1.position, slot1.rotation);
+                go = Instantiate(can, slot1.position, slot1.rotation);
                 break;
             case "glass-bottle":
-                new_obj = Instantiate(gbottle, slot2.position, slot2.rotation);
+                go = Instantiate(gbottle, slot2.position, slot2.rotation);
                 break;
             case "plastic-bag":
-                new_obj = Instantiate(trashbag, slot3.position, slot3.rotation);
+                go = Instantiate(trashbag, slot3.position, slot3.rotation);
                 break;
             
             default:
-                new_obj = null;
+                Debug.Log("default case");
+                go = null;
                 break;
         }
-        if(new_obj!=null){
-            objects[obj]++;
-            new_obj.transform.GetComponent<Object>().Initiate(this);
+        if(go!=null){
+            go.transform.GetComponent<Object>().Initiate(this);
+            objects[obj_str]++;
         }
     }
 
-    public void ThrowInBin(string obj){
-        //must implement
+    public void DestroyObject(string obj_type){
+        objects[obj_type]--;
+    }
+
+    public void ObjectOut(){
+        out_cpt++;
+        if(out_cpt==10 && !win){
+            TravelToFuture();
+            DisplayWin();
+            loose = true;
+        }
+        out_pane.text = "Objects Out -> "+out_cpt+"/10";
+    }
+    public void ObjectIn(){
+        out_cpt--;
+        out_pane.text = "Objects Out -> "+out_cpt+"/10";
     }
 }
