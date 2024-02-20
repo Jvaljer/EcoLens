@@ -52,8 +52,15 @@ public class Object : MonoBehaviour {
         dropped = true;
     }
 
-    public void Initiate(DashBoard script){
+    public void Initiate(DashBoard script, Transform boundaries){
         dashboard = script;
+        capsule = boundaries;
         init = true;
+    }
+
+    private void OnDestroy(){
+        if(counted_out){
+            dashboard.ObjectIn();
+        }
     }
 }

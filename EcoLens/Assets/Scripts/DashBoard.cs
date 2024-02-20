@@ -10,8 +10,14 @@ public class DashBoard : MonoBehaviour {
 
     public GameObject room;
     private GameObject environment;
+
     public Material btn_M;
+    public Material btn_click_M;
     public Material btn_hover_M;
+
+    public GameObject past_btn;
+    public GameObject present_btn;
+    public GameObject future_btn;
 
     public Transform slot1;
     public Transform slot2;
@@ -52,11 +58,16 @@ public class DashBoard : MonoBehaviour {
             r.material = btn_M;
         }
     }
+    public void ButtonClick(GameObject btn){
+        Renderer r = btn.transform.GetComponent<Renderer>();
+        if(r != null){
+            r.material = btn_click_M;
+        }
+    }
 
     public void TravelToPast(){
         if(current_time == "past")
             return;
-        
         Debug.Log("Travelling to PAST");
         current_time = "past";
     }
@@ -82,9 +93,9 @@ public class DashBoard : MonoBehaviour {
         o2.transform.position = slot2.position;
         o3.transform.position = slot3.position;
 
-        o1.transform.GetComponent<Object>().Initiate(this);
-        o2.transform.GetComponent<Object>().Initiate(this);
-        o3.transform.GetComponent<Object>().Initiate(this);
+        o1.transform.GetComponent<Object>().Initiate(this, room.transform);
+        o2.transform.GetComponent<Object>().Initiate(this, room.transform);
+        o3.transform.GetComponent<Object>().Initiate(this, room.transform);
 
         btn1.transform.GetComponent<SpawnBtn>().SetObject(o1.transform.GetComponent<Object>().obj_type);
         btn2.transform.GetComponent<SpawnBtn>().SetObject(o2.transform.GetComponent<Object>().obj_type);
@@ -170,7 +181,7 @@ public class DashBoard : MonoBehaviour {
                 break;
         }
         if(go!=null){
-            go.transform.GetComponent<Object>().Initiate(this);
+            go.transform.GetComponent<Object>().Initiate(this, room.transform);
             objects[obj_str]++;
         }
     }
