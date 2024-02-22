@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeaSide : MonoBehaviour {
+public class Sea : MonoBehaviour {
     public GameObject player;
 
     public GameObject hub_room;
     public DoorDetectors nav;
+
     public GameObject capsule;
     public DashBoard dashboard_script;
     public Transform spawn;
@@ -16,7 +17,7 @@ public class SeaSide : MonoBehaviour {
     public GameObject obj3;
 
     void Start(){
-        Debug.Log("SeaSide.cs Starts");
+        Debug.Log("Sea.cs Starts");
     }
 
     public void Load(){
@@ -26,6 +27,7 @@ public class SeaSide : MonoBehaviour {
 
         player.transform.position = spawn.position;
 
+        dashboard_script.AddObjects(obj1.transform.GetComponent<Object>().obj_type, obj2.transform.GetComponent<Object>().obj_type, obj3.transform.GetComponent<Object>().obj_type);
         dashboard_script.PlaceObjects(obj1, obj2, obj3);
     }
 }

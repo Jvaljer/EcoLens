@@ -50,15 +50,16 @@
      <Compile Include="Assets\Scripts\Detector.cs" />
      <Compile Include="Assets\Paid\Snowy Cliff Materials Pack\Demo\SnowyCliffMaterialSwitch.cs" />
      <Compile Include="Assets\Scripts\Bin.cs" />
+     <Compile Include="Assets\Scripts\InNOut.cs" />
      <Compile Include="Assets\Scripts\BackDoor.cs" />
      <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\MouseLook.cs" />
      <Compile Include="Assets\Scripts\DoorDetectors.cs" />
      <Compile Include="Assets\Scripts\SpawnBtn.cs" />
+     <Compile Include="Assets\Scripts\Sea.cs" />
      <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\DashBoard.cs" />
      <Compile Include="Assets\Rocks and Boulders 2\Shaders\RotateGameObject.cs" />
      <Compile Include="Assets\Scripts\Mountain.cs" />
-     <Compile Include="Assets\Scripts\SeaSide.cs" />
      <Compile Include="Assets\Scripts\Forest.cs" />
      <Compile Include="Assets\Scripts\Object.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

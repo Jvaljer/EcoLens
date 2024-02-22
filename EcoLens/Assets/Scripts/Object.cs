@@ -6,9 +6,8 @@ public class Object : MonoBehaviour {
     public DashBoard dashboard;
     public Transform capsule;
     
-    private bool placed = false;
     private bool dropped = false;
-    private bool in_capsule = true;
+    public bool in_capsule = true;
     private bool init = false;
     private bool counted_out = false;
     public string obj_type;
@@ -20,20 +19,12 @@ public class Object : MonoBehaviour {
             //for that we have 2 options
                 //adding an "in" collider for the capsule and checking if there is a triggering or not
                 //checking for positions
-            
-            float dx = Mathf.Abs(gameObject.transform.position.x - capsule.position.x);
-            float dy = Mathf.Abs(gameObject.transform.position.y - capsule.position.y);
-            float dz = Mathf.Abs(gameObject.transform.position.z - capsule.position.z);
-            if(dx>5f || dz>5f || dy>5f){
-                Debug.Log("in_capsule -> False");
-                in_capsule = false;
+            if(!in_capsule){
                 if(!counted_out){
-                    dashboard.ObjectOut();
+                    dashboard.ObjectOut(obj_type);
                     counted_out = true;
                 }
             } else {
-                Debug.Log("in_capsule -> True");
-                in_capsule = true;
                 if(counted_out){
                     dashboard.ObjectIn();
                     counted_out = false;

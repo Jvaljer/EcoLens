@@ -7,6 +7,7 @@ public class DashBoard : MonoBehaviour {
     public TMP_Text info_pane;
     public TMP_Text bin_pane;
     public TMP_Text out_pane;
+    public TMP_Text outinfo_pane;
 
     public GameObject room;
     private GameObject environment;
@@ -114,11 +115,86 @@ public class DashBoard : MonoBehaviour {
 
     public void DisplayInformations(string obj){
         switch (obj){
-            case "test-cube":
-                info_pane.text = "The object you grabbed is the testing cube";
+        case "test-cube":
+            info_pane.text = "The object you grabbed is the testing cube";
+            break;
+        
+        // Mountain objects
+        case "cigaret":
+            info_pane.text = "Cigarettes are commonly found littered in mountain areas, posing a threat to wildlife and ecosystems.";
+            break;
+        case "drink":
+            info_pane.text = "You've found a discarded beverage container, commonly left behind in mountainous regions.";
+            break;
+        case "food-wrapper":
+            info_pane.text = "This food wrapper is likely from hikers or campers, unfortunately left behind in nature.";
+            break;
+        
+        // Forest objects
+        case "plastic-bottle":
+            info_pane.text = "Plastic bottles are often discarded in forests, contributing to pollution and harming forest inhabitants due to their plastic materials.";
+            break;
+        case "tire":
+            info_pane.text = "Tires -as any engine parts- dumped in forests pose a significant environmental hazard, contaminating soil and water.";
+            break;
+        case "paper-towel":
+            info_pane.text = "Paper towels littered in forests can take a long time to decompose, impacting the natural environment.";
+            break;
+        
+        // Sea objects
+        case "can":
+            info_pane.text = "Cans are commonly found in coastal areas, washed ashore by tides, posing a threat to marine life.";
+            break;
+        case "glass-bottle":
+            info_pane.text = "Glass bottles discarded in the sea can break into dangerous shards and harm marine creatures.";
+            break;
+        case "plastic-bag":
+            info_pane.text = "Plastic bags are a major source of marine pollution, endangering ocean ecosystems and wildlife.";
+            break;
+        
+        default:
+            info_pane.text = "Object:["+obj+"] hasn't been implemented yet";
+            break;
+    }
+    }
+
+    public void DisplayThrewInfo(string obj){
+        switch (obj){
+            // Mountain objects
+            case "cigaret":
+                outinfo_pane.text = "* 500 liters of water contaminated,\n* 10+ years to decompose,\n* contains toxic plastic materials & chemicals.";
                 break;
+            case "drink":
+                outinfo_pane.text = "* 9% of plastic pollution,\n* Contaminate fauna and flora\n";
+                break;
+            case "food-wrapper":
+                outinfo_pane.text = "* 9% of plastic pollution,\n* Animals eat it and get sick\n* 10 to 100 years to decompose";
+                break;
+            
+            // Forest objects
+            case "plastic-bottle":
+                outinfo_pane.text = "* 12% of plastic pollution,\n* Isn't biodegradable,\n* 1000 years to decompose";
+                break;
+            case "tire":
+                outinfo_pane.text = "* Polluting the soils due to their compositon,\n* 577'200 tons of tires in 2022\n";
+                break;
+            case "paper-towel":
+                outinfo_pane.text = "* 3+ months to decompose,\n";
+                break;
+            
+            // Sea objects
+            case "can":
+                outinfo_pane.text = "* 77 cans per human each year\n* 200 years to decompose,\n* Alluminum pollution of oceans and soils";
+                break;
+            case "glass-bottle":
+                outinfo_pane.text = "* 4000 years to decompose,\n";
+                break;
+            case "plastic-bag":
+                outinfo_pane.text = "* 14% of plastic pollution,\n* 400 years to decompose";
+                break;
+            
             default:
-                info_pane.text = "Object:["+obj+"] hasn't been implemented yet";
+                outinfo_pane.text = "~Not Informed~";
                 break;
         }
     }
@@ -190,8 +266,9 @@ public class DashBoard : MonoBehaviour {
         objects[obj_type]--;
     }
 
-    public void ObjectOut(){
+    public void ObjectOut(string obj){
         out_cpt++;
+        DisplayThrewInfo(obj);
         if(out_cpt==10 && !win){
             TravelToFuture();
             DisplayWin();
