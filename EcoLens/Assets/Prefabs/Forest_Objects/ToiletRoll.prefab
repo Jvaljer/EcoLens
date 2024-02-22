@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4536236828660507035}
   - component: {fileID: -2044098885043739026}
   - component: {fileID: 5457395528453904234}
+  - component: {fileID: 3751151962539131903}
   m_Layer: 0
   m_Name: ToiletRoll
   m_TagString: Untagged
@@ -97,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashboard: {fileID: 0}
+  capsule: {fileID: 0}
   obj_type: paper-towel
 --- !u!54 &-2044098885043739026
 Rigidbody:
@@ -249,3 +251,16 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!65 &3751151962539131903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165387385290174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1016, y: 0.10201532, z: 0.1016}
+  m_Center: {x: -1.8085619e-16, y: 0.00020766072, z: 0.0508}
