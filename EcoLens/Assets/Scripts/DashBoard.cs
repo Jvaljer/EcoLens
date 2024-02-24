@@ -11,6 +11,7 @@ public class DashBoard : MonoBehaviour {
 
     public GameObject room;
     private GameObject environment;
+    public GameObject info_screen;
 
     public Material btn_M;
     public Material btn_click_M;
@@ -19,6 +20,7 @@ public class DashBoard : MonoBehaviour {
     public GameObject past_btn;
     public GameObject present_btn;
     public GameObject future_btn;
+    public GameObject player_cam;
 
     public Transform slot1;
     public Transform slot2;
@@ -279,5 +281,11 @@ public class DashBoard : MonoBehaviour {
     public void ObjectIn(){
         out_cpt--;
         out_pane.text = "Objects Out -> "+out_cpt+"/10";
+    }
+
+    public void PlaceInfo(Vector3 pts){
+        info_screen.transform.position = pts;
+        Vector3 cam_dir = player_cam.transform.position - info_screen.transform.position;
+        info_screen.transform.rotation = Quaternion.LookRotation(cam_dir);
     }
 }

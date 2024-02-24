@@ -2662,6 +2662,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 482836720221118708, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
+      propertyPath: dashboard
+      value: 
+      objectReference: {fileID: 1446803958}
     - target: {fileID: 1152959341887365275, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -2782,6 +2786,14 @@ PrefabInstance:
       propertyPath: info_pane
       value: 
       objectReference: {fileID: 1167467884}
+    - target: {fileID: 8700564732499615666, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
+      propertyPath: player_cam
+      value: 
+      objectReference: {fileID: 1736353520}
+    - target: {fileID: 8700564732499615666, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
+      propertyPath: info_screen
+      value: 
+      objectReference: {fileID: 1894530481}
     - target: {fileID: 8978308701742929479, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.125
@@ -2821,6 +2833,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1894530481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7785626613905863697, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
+  m_PrefabInstance: {fileID: 1894530477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2011579785
 GameObject:
   m_ObjectHideFlags: 0

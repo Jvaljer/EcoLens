@@ -22,6 +22,7 @@ public class Object : MonoBehaviour {
             if(!in_capsule){
                 if(!counted_out){
                     dashboard.ObjectOut(obj_type);
+                    dashboard.PlaceInfo(this.transform.position);
                     counted_out = true;
                 }
             } else {
