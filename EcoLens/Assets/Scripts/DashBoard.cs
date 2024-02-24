@@ -8,6 +8,7 @@ public class DashBoard : MonoBehaviour {
     public TMP_Text bin_pane;
     public TMP_Text out_pane;
     public TMP_Text outinfo_pane;
+    public TMP_Text indicator;
 
     public GameObject room;
     private GameObject environment;
@@ -44,6 +45,7 @@ public class DashBoard : MonoBehaviour {
 
     private bool win = false;
     private bool loose = false;
+    private bool set_info = false;
 
     private Dictionary<string, int> objects;
 
@@ -71,20 +73,20 @@ public class DashBoard : MonoBehaviour {
     public void TravelToPast(){
         if(current_time == "past")
             return;
-        Debug.Log("Travelling to PAST");
         current_time = "past";
+        indicator.text = "Currently in PAST";
     }
     public void TravelToPresent(){
         if(current_time == "present")
             return;
-        Debug.Log("Travelling to PRESENT");
-        current_time = "past";
+        current_time = "present";
+        indicator.text = "Currently in PRESENT";
     }
     public void TravelToFuture(){
         if(current_time == "future")
             return;
-        Debug.Log("Travelling to FUTURE");
-        current_time = "past";
+        indicator.text = "Currently in FUTURE";
+        current_time = "future";
     }
 
     public void SetEnvironment(GameObject env){
@@ -117,47 +119,47 @@ public class DashBoard : MonoBehaviour {
 
     public void DisplayInformations(string obj){
         switch (obj){
-        case "test-cube":
-            info_pane.text = "The object you grabbed is the testing cube";
-            break;
-        
-        // Mountain objects
-        case "cigaret":
-            info_pane.text = "Cigarettes are commonly found littered in mountain areas, posing a threat to wildlife and ecosystems.";
-            break;
-        case "drink":
-            info_pane.text = "You've found a discarded beverage container, commonly left behind in mountainous regions.";
-            break;
-        case "food-wrapper":
-            info_pane.text = "This food wrapper is likely from hikers or campers, unfortunately left behind in nature.";
-            break;
-        
-        // Forest objects
-        case "plastic-bottle":
-            info_pane.text = "Plastic bottles are often discarded in forests, contributing to pollution and harming forest inhabitants due to their plastic materials.";
-            break;
-        case "tire":
-            info_pane.text = "Tires -as any engine parts- dumped in forests pose a significant environmental hazard, contaminating soil and water.";
-            break;
-        case "paper-towel":
-            info_pane.text = "Paper towels littered in forests can take a long time to decompose, impacting the natural environment.";
-            break;
-        
-        // Sea objects
-        case "can":
-            info_pane.text = "Cans are commonly found in coastal areas, washed ashore by tides, posing a threat to marine life.";
-            break;
-        case "glass-bottle":
-            info_pane.text = "Glass bottles discarded in the sea can break into dangerous shards and harm marine creatures.";
-            break;
-        case "plastic-bag":
-            info_pane.text = "Plastic bags are a major source of marine pollution, endangering ocean ecosystems and wildlife.";
-            break;
-        
-        default:
-            info_pane.text = "Object:["+obj+"] hasn't been implemented yet";
-            break;
-    }
+            case "test-cube":
+                info_pane.text = "The object you grabbed is the testing cube";
+                break;
+            
+            // Mountain objects
+            case "cigaret":
+                info_pane.text = "Cigarettes are commonly found littered in mountain areas, posing a threat to wildlife and ecosystems.";
+                break;
+            case "drink":
+                info_pane.text = "You've found a discarded beverage container, commonly left behind in mountainous regions.";
+                break;
+            case "food-wrapper":
+                info_pane.text = "This food wrapper is likely from hikers or campers, unfortunately left behind in nature.";
+                break;
+            
+            // Forest objects
+            case "plastic-bottle":
+                info_pane.text = "Plastic bottles are often discarded in forests, contributing to pollution and harming forest inhabitants due to their plastic materials.";
+                break;
+            case "tire":
+                info_pane.text = "Tires -as any engine parts- dumped in forests pose a significant environmental hazard, contaminating soil and water.";
+                break;
+            case "paper-towel":
+                info_pane.text = "Paper towels littered in forests can take a long time to decompose, impacting the natural environment.";
+                break;
+            
+            // Sea objects
+            case "can":
+                info_pane.text = "Cans are commonly found in coastal areas, washed ashore by tides, posing a threat to marine life.";
+                break;
+            case "glass-bottle":
+                info_pane.text = "Glass bottles discarded in the sea can break into dangerous shards and harm marine creatures.";
+                break;
+            case "plastic-bag":
+                info_pane.text = "Plastic bags are a major source of marine pollution, endangering ocean ecosystems and wildlife.";
+                break;
+            
+            default:
+                info_pane.text = "Object:["+obj+"] hasn't been implemented yet";
+                break;
+        }
     }
 
     public void DisplayThrewInfo(string obj){
@@ -284,6 +286,10 @@ public class DashBoard : MonoBehaviour {
     }
 
     public void PlaceInfo(Vector3 pts){
+        if(!set_info){
+            info_screen.SetActive(true);
+            set_info = true;
+        }
         info_screen.transform.position = pts;
         Vector3 cam_dir = player_cam.transform.position - info_screen.transform.position;
         info_screen.transform.rotation = Quaternion.LookRotation(cam_dir);
