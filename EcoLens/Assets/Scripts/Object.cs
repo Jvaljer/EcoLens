@@ -44,7 +44,7 @@ public class Object : MonoBehaviour {
         dropped = true;
     }
 
-    public void Initiate(DashBoard script, Transform boundaries){
+    public void Initiate(DashBoard script, Transform boundaries, int i){
         dashboard = script;
         capsule = boundaries;
         init = true;

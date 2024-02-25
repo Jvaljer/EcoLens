@@ -27,6 +27,7 @@ public class DashBoard : MonoBehaviour {
     public GameObject present_btn;
     public GameObject future_btn;
     public GameObject player_cam;
+    public GameObject bin_screen;
 
     public Transform slot1;
     public Transform slot2;
@@ -50,6 +51,7 @@ public class DashBoard : MonoBehaviour {
 
     private bool win = false;
     private bool loose = false;
+    private bool end = false;
     private bool set_info = false;
 
     private Dictionary<string, int> objects;
@@ -76,21 +78,21 @@ public class DashBoard : MonoBehaviour {
     }
 
     public void TravelToPast(){
-        if(current_time == "past")
+        if(current_time == "past" || end)
             return;
         current_time = "past";
         indicator.text = "Currently in PAST";
         TimeTravel();
     }
     public void TravelToPresent(){
-        if(current_time == "present")
+        if(current_time == "present" || end)
             return;
         current_time = "present";
         indicator.text = "Currently in PRESENT";
         TimeTravel();
     }
     public void TravelToFuture(){
-        if(current_time == "future")
+        if(current_time == "future" || end)
             return;
         indicator.text = "Currently in FUTURE";
         current_time = "future";
@@ -121,7 +123,6 @@ public class DashBoard : MonoBehaviour {
                 cur_env = "forest";
                 break;
             case "Mountain":
-                Debug.Log("Mountain Environment has been set");
                 env_m = environment.transform.GetComponent<Mountain>();
                 cur_env = "mountain";
                 break;
@@ -139,9 +140,9 @@ public class DashBoard : MonoBehaviour {
         o2.transform.position = slot2.position;
         o3.transform.position = slot3.position;
 
-        o1.transform.GetComponent<Object>().Initiate(this, room.transform);
-        o2.transform.GetComponent<Object>().Initiate(this, room.transform);
-        o3.transform.GetComponent<Object>().Initiate(this, room.transform);
+        o1.transform.GetComponent<Object>().Initiate(this, room.transform, 0);
+        o2.transform.GetComponent<Object>().Initiate(this, room.transform, 0);
+        o3.transform.GetComponent<Object>().Initiate(this, room.transform, 0);
 
         btn1.transform.GetComponent<SpawnBtn>().SetObject(o1.transform.GetComponent<Object>().obj_type);
         btn2.transform.GetComponent<SpawnBtn>().SetObject(o2.transform.GetComponent<Object>().obj_type);
@@ -244,20 +245,59 @@ public class DashBoard : MonoBehaviour {
         }
     }
     private void DisplayLoose(){
-        //must implement
+        //here we wanna display an explanatory message on the front wall
     }
     private void DisplayWin(){
-        //must implement
+        //here we wanna display an explanatory message on the front wall
+    }
+    private void End(){
+        //here we wanna set the counters OFF
+        bin_screen.SetActive(false);
+        out_pane.gameObject.SetActive(false);
+
+        //display quick message
+        if(win){
+            indicator.text = "Well Done !!!";
+        }
+        if(loose){
+            indicator.text = "Too Bad...";
+        }
+
+        //also disable the objects
+        switch (cur_env){
+            case "forest":
+                env_f.DisableObjects();
+                break;
+            case "mountain":
+                env_m.DisableObjects();
+                break;
+            case "sea":
+                //env_s.DisableObjects();
+                break;
+        }
+        btn1.SetActive(false);
+        btn2.SetActive(false);
+        btn3.SetActive(false);
+    }
+    public void Launch(){
+        if(!end)
+            return;
+        
+        end = false;
+        bin_screen.SetActive(true);
+        out_pane.gameObject.SetActive(true);
     }
 
     public void ThrowInBin(){
         bin_cpt++;
-        if(bin_cpt==10 && !loose){
+        if(bin_cpt==5 && !loose){
             TravelToPast();
             DisplayWin();
             win = true;
+            end = true;
+            End();
         }
-        bin_pane.text = bin_cpt+"/10";
+        bin_pane.text = bin_cpt+"/5";
     }
 
     public void SpawnObject(string obj_str){
@@ -297,12 +337,13 @@ public class DashBoard : MonoBehaviour {
                 break;
             
             default:
-                Debug.Log("default case");
                 go = null;
                 break;
         }
         if(go!=null){
-            go.transform.GetComponent<Object>().Initiate(this, room.transform);
+            Debug.Log("SPAWNED A NOT NULL OBJECT");
+            go.tag = "Object";
+            go.transform.GetComponent<Object>().Initiate(this, room.transform, 1);
             objects[obj_str]++;
         }
     }
@@ -312,18 +353,22 @@ public class DashBoard : MonoBehaviour {
     }
 
     public void ObjectOut(string obj){
+        Debug.Log("We got an object out duh");
         out_cpt++;
         DisplayThrewInfo(obj);
-        if(out_cpt==10 && !win){
+        if(out_cpt==5 && !win){
             TravelToFuture();
             DisplayWin();
             loose = true;
+            end = true;
+            End();
         }
-        out_pane.text = "Objects Out -> "+out_cpt+"/10";
+        out_pane.text = "Objects Out -> "+out_cpt+"/5";
     }
     public void ObjectIn(){
+        Debug.Log("We got an object in rn");
         out_cpt--;
-        out_pane.text = "Objects Out -> "+out_cpt+"/10";
+        out_pane.text = "Objects Out -> "+out_cpt+"/5";
     }
 
     public void PlaceInfo(Vector3 pts){

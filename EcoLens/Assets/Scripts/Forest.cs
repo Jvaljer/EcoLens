@@ -27,7 +27,7 @@ public class Forest : MonoBehaviour {
 
     public void Init(){
         capsule.SetActive(true);
-        capsule.transform.position = new Vector3(28,10,-132);
+        capsule.transform.position = new Vector3(-11,5,-160);
 
         player.transform.position = spawn.position;
         player.transform.rotation = capsule.transform.rotation;
@@ -90,5 +90,10 @@ public class Forest : MonoBehaviour {
         obj1.SetActive(true);
         obj2.SetActive(true);
         obj3.SetActive(true);
+    }
+    public void DisableObjects(){
+        obj1.SetActive(false);
+        obj2.SetActive(false);
+        obj3.SetActive(false);
     }
 }

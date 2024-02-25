@@ -2305,6 +2305,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdeff9b8fc0fe404984942858c8bfd19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1498931607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 422512831394863710, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
+  m_PrefabInstance: {fileID: 1894530477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1541256308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2946,15 +2951,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3444804698488473010, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 455
+      value: -55.1
       objectReference: {fileID: 0}
     - target: {fileID: 3444804698488473010, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3444804698488473010, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 165
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3444804698488473010, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2998,7 +3003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4934813693905817487, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5491041550631477003, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_Layer
@@ -3014,27 +3019,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7895794435955232674, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_Size.x
-      value: 10.905846
+      value: 10.271252
       objectReference: {fileID: 0}
     - target: {fileID: 7895794435955232674, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_Size.y
-      value: 4.5765605
+      value: 5.412229
       objectReference: {fileID: 0}
     - target: {fileID: 7895794435955232674, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_Size.z
-      value: 9.300689
+      value: 10.420546
       objectReference: {fileID: 0}
     - target: {fileID: 7895794435955232674, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_Center.x
-      value: 0.07103348
+      value: -0.0053653717
       objectReference: {fileID: 0}
     - target: {fileID: 7895794435955232674, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_Center.y
-      value: 2.785425
+      value: 2.5222247
       objectReference: {fileID: 0}
     - target: {fileID: 7895794435955232674, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: m_Center.z
-      value: -0.41099596
+      value: 0.090958595
       objectReference: {fileID: 0}
     - target: {fileID: 8700564732499615666, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: room
@@ -3060,6 +3065,10 @@ PrefabInstance:
       propertyPath: info_pane
       value: 
       objectReference: {fileID: 1167467884}
+    - target: {fileID: 8700564732499615666, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
+      propertyPath: bin_screen
+      value: 
+      objectReference: {fileID: 1498931607}
     - target: {fileID: 8700564732499615666, guid: 797b91f90ca4e6f49965a6d3f3b511c2, type: 3}
       propertyPath: player_cam
       value: 

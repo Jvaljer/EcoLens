@@ -22,12 +22,10 @@ public class SpawnBtn : MonoBehaviour {
     }
 
     public void Click(){
-        Debug.Log("Clicked for object ["+obj+"]");
         dashboard.SpawnObject(obj);
     }
 
     public void SetObject(string str){
-        Debug.Log("Setting object as ["+str+"]");
         obj = str;
     }
 }

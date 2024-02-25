@@ -92,4 +92,9 @@ public class Mountain : MonoBehaviour {
         obj2.SetActive(true);
         obj3.SetActive(true);
     }
+    public void DisableObjects(){
+        obj1.SetActive(false);
+        obj2.SetActive(false);
+        obj3.SetActive(false);
+    }
 }
