@@ -103,7 +103,7 @@ public class DashBoard : MonoBehaviour {
                 env_f.Load(current_time);
                 break;
             case "mountain":
-                //env_m.Load(current_time);
+                env_m.Load(current_time);
                 break;
             case "sea":
                 //env_s.Load(current_time);
@@ -121,6 +121,7 @@ public class DashBoard : MonoBehaviour {
                 cur_env = "forest";
                 break;
             case "Mountain":
+                Debug.Log("Mountain Environment has been set");
                 env_m = environment.transform.GetComponent<Mountain>();
                 cur_env = "mountain";
                 break;

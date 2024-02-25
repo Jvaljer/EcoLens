@@ -128,8 +128,8 @@ public class DoorDetectors : MonoBehaviour {
             return;
         }
         //here we wanna activate the related environment
-        mountain_env.SetActive(true);
-        mountain_env.transform.GetComponent<Mountain>().Load();
+        mountain_env.transform.GetComponent<Mountain>().Init();
+        mountain_env.transform.GetComponent<Mountain>().LoadPresent();
         //disable the possibility to teleport
             //just don't attach any teleport script to env scripts
         //make the hub disappear

@@ -30,6 +30,7 @@ public class Forest : MonoBehaviour {
         capsule.transform.position = new Vector3(28,10,-132);
 
         player.transform.position = spawn.position;
+        player.transform.rotation = capsule.transform.rotation;
 
         dashboard_script.SetEnvironment(this.gameObject);
         ActiveObjects();
