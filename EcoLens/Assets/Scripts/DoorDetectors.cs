@@ -143,8 +143,8 @@ public class DoorDetectors : MonoBehaviour {
         if(!seaside){
             return;
         }
-        sea_env.SetActive(true);
-        sea_env.transform.GetComponent<Sea>().Load();
+        sea_env.transform.GetComponent<Sea>().Init();
+        sea_env.transform.GetComponent<Sea>().LoadPresent();
         hub_room.SetActive(false);
         floor.SetActive(false);
     }

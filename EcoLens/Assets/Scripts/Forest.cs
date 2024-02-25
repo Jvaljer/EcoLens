@@ -11,6 +11,7 @@ public class Forest : MonoBehaviour {
     public GameObject capsule;
     public DashBoard dashboard_script;
     public Transform spawn;
+    public BackDoor back_door;
 
     public GameObject obj1;
     public GameObject obj2;
@@ -58,18 +59,21 @@ public class Forest : MonoBehaviour {
         past.SetActive(true);
         dashboard_script.SetObjects(obj1, obj2, obj3);
         cur_env = "past";
+        back_door.SetEnvironment("Forest", past);
     }
     public void LoadPresent(){
         Unload();
         present.SetActive(true);
         dashboard_script.SetObjects(obj1, obj2, obj3);
         cur_env = "present";
+        back_door.SetEnvironment("Forest", present);
     }
     public void LoadFuture(){
         Unload();
         future.SetActive(true);
         dashboard_script.SetObjects(obj1, obj2, obj3);
         cur_env = "future";
+        back_door.SetEnvironment("Forest", future);
     }
 
     public void Unload(){
