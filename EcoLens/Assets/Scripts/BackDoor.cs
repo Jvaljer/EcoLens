@@ -26,7 +26,8 @@ public class BackDoor : MonoBehaviour {
     
 
     void Start(){
-        environment = GameObject.FindGameObjectsWithTag("Environment")[0];
+        //shall load current environment !!!
+        //must implement
     }
 
     public void GoBackHub(){

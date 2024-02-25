@@ -22,12 +22,13 @@ public class Mountain : MonoBehaviour {
 
     public void Load(){
         capsule.SetActive(true);
-        capsule.transform.position = gameObject.transform.position;
-        capsule.transform.rotation = gameObject.transform.rotation;
+        //capsule.transform.position = gameObject.transform.position;
+        //capsule.transform.rotation = gameObject.transform.rotation;
+        capsule.transform.position = new Vector3(0,0, -600);
 
         player.transform.position = spawn.position;
 
         dashboard_script.AddObjects(obj1.transform.GetComponent<Object>().obj_type, obj2.transform.GetComponent<Object>().obj_type, obj3.transform.GetComponent<Object>().obj_type);
-        dashboard_script.PlaceObjects(obj1, obj2, obj3);
+        dashboard_script.SetObjects(obj1, obj2, obj3);
     }
 }

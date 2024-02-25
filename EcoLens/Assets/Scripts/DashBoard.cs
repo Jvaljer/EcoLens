@@ -14,6 +14,11 @@ public class DashBoard : MonoBehaviour {
     private GameObject environment;
     public GameObject info_screen;
 
+    private Forest env_f;
+    private Mountain env_m;
+    private Sea env_s;
+    private string cur_env = "";
+
     public Material btn_M;
     public Material btn_click_M;
     public Material btn_hover_M;
@@ -75,25 +80,60 @@ public class DashBoard : MonoBehaviour {
             return;
         current_time = "past";
         indicator.text = "Currently in PAST";
+        TimeTravel();
     }
     public void TravelToPresent(){
         if(current_time == "present")
             return;
         current_time = "present";
         indicator.text = "Currently in PRESENT";
+        TimeTravel();
     }
     public void TravelToFuture(){
         if(current_time == "future")
             return;
         indicator.text = "Currently in FUTURE";
         current_time = "future";
+        TimeTravel();
+    }
+
+    private void TimeTravel(){
+        switch (cur_env){
+            case "forest":
+                env_f.Load(current_time);
+                break;
+            case "mountain":
+                //env_m.Load(current_time);
+                break;
+            case "sea":
+                //env_s.Load(current_time);
+                break;
+            default:
+                break;
+        }
     }
 
     public void SetEnvironment(GameObject env){
         environment = env;
+        switch (environment.tag){
+            case "Forest":
+                env_f = environment.transform.GetComponent<Forest>();
+                cur_env = "forest";
+                break;
+            case "Mountain":
+                env_m = environment.transform.GetComponent<Mountain>();
+                cur_env = "mountain";
+                break;
+            case "Sea":
+                env_s = environment.transform.GetComponent<Sea>();
+                cur_env = "sea";
+                break;
+            default:
+                break;
+        }
     }
 
-    public void PlaceObjects(GameObject o1, GameObject o2, GameObject o3){
+    public void SetObjects(GameObject o1, GameObject o2, GameObject o3){
         o1.transform.position = slot1.position;
         o2.transform.position = slot2.position;
         o3.transform.position = slot3.position;

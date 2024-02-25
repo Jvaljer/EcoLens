@@ -116,8 +116,8 @@ public class DoorDetectors : MonoBehaviour {
         if(!forest){
             return;
         }
-        forest_env.SetActive(true);
-        forest_env.transform.GetComponent<Forest>().Load();
+        forest_env.transform.GetComponent<Forest>().Init();
+        forest_env.transform.GetComponent<Forest>().LoadPresent();
         hub_room.SetActive(false);
         floor.SetActive(false);
     }

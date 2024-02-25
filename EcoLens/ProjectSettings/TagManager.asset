@@ -12,6 +12,7 @@ TagManager:
   - Placeholder
   - Rig
   - Wall
+  - Forest
   layers:
   - Default
   - TransparentFX
