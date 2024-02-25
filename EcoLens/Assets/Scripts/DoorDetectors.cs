@@ -116,8 +116,8 @@ public class DoorDetectors : MonoBehaviour {
         if(!forest){
             return;
         }
-        forest_env.SetActive(true);
-        forest_env.transform.GetComponent<Forest>().Load();
+        forest_env.transform.GetComponent<Forest>().Init();
+        forest_env.transform.GetComponent<Forest>().LoadPresent();
         hub_room.SetActive(false);
         floor.SetActive(false);
     }
@@ -128,8 +128,8 @@ public class DoorDetectors : MonoBehaviour {
             return;
         }
         //here we wanna activate the related environment
-        mountain_env.SetActive(true);
-        mountain_env.transform.GetComponent<Mountain>().Load();
+        mountain_env.transform.GetComponent<Mountain>().Init();
+        mountain_env.transform.GetComponent<Mountain>().LoadPresent();
         //disable the possibility to teleport
             //just don't attach any teleport script to env scripts
         //make the hub disappear
@@ -143,8 +143,8 @@ public class DoorDetectors : MonoBehaviour {
         if(!seaside){
             return;
         }
-        sea_env.SetActive(true);
-        sea_env.transform.GetComponent<Sea>().Load();
+        sea_env.transform.GetComponent<Sea>().Init();
+        sea_env.transform.GetComponent<Sea>().LoadPresent();
         hub_room.SetActive(false);
         floor.SetActive(false);
     }

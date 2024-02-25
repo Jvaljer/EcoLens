@@ -11,23 +11,95 @@ public class Mountain : MonoBehaviour {
     public GameObject capsule;
     public DashBoard dashboard_script;
     public Transform spawn;
+    public BackDoor back_door;
 
     public GameObject obj1;
     public GameObject obj2;
     public GameObject obj3;
 
+    public GameObject past;
+    public GameObject present;
+    public GameObject future;
+    private string cur_env = "";
+
     void Start(){
         Debug.Log("Mountain.cs Starts");
     }
 
-    public void Load(){
+    public void Init(){
         capsule.SetActive(true);
-        capsule.transform.position = gameObject.transform.position;
-        capsule.transform.rotation = gameObject.transform.rotation;
-
+        capsule.transform.position = new Vector3(455,3.7f,165);
+        capsule.transform.rotation = Quaternion.Euler(0,200,0);
+        
+        player.transform.rotation = capsule.transform.rotation;
         player.transform.position = spawn.position;
 
+
+        dashboard_script.SetEnvironment(this.gameObject);
+        ActiveObjects();
         dashboard_script.AddObjects(obj1.transform.GetComponent<Object>().obj_type, obj2.transform.GetComponent<Object>().obj_type, obj3.transform.GetComponent<Object>().obj_type);
-        dashboard_script.PlaceObjects(obj1, obj2, obj3);
+    }
+
+    public void Load(string time){
+        switch(time){
+            case "past":
+                LoadPast();
+                break;
+            case "present":
+                LoadPresent();
+                break;
+            case "future":
+                LoadFuture();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void LoadPast(){
+        Unload();
+        past.SetActive(true);
+        dashboard_script.SetObjects(obj1, obj2, obj3);
+        cur_env = "past";
+        back_door.SetEnvironment("Mountain", past);
+    }
+    public void LoadPresent(){
+        Unload();
+        present.SetActive(true);
+        dashboard_script.SetObjects(obj1, obj2, obj3);
+        cur_env = "present";
+        back_door.SetEnvironment("Mountain", present);
+    }
+    public void LoadFuture(){
+        Unload();
+        future.SetActive(true);
+        dashboard_script.SetObjects(obj1, obj2, obj3);
+        cur_env = "future";
+        back_door.SetEnvironment("Mountain", future);
+    }
+
+    public void Unload(){
+        switch (cur_env){
+            case "past":
+                past.SetActive(false);
+                break;
+            case "present":
+                present.SetActive(false);
+                break;
+            case "future":
+                future.SetActive(false);
+                break;
+        }
+    }
+
+    private void ActiveObjects(){
+        obj1.SetActive(true);
+        obj2.SetActive(true);
+        obj3.SetActive(true);
+    }
+    public void DisableObjects(){
+        obj1.SetActive(false);
+        obj2.SetActive(false);
+        obj3.SetActive(false);
     }
 }

@@ -19,14 +19,19 @@ public class BackDoor : MonoBehaviour {
     public GameObject hub;
     public GameObject floor;
     public GameObject capsule;
-    private GameObject environment;
     public Transform hub_spawn;
     public GameObject player;
     public DoorDetectors navigation;
-    
 
-    void Start(){
-        environment = GameObject.FindGameObjectsWithTag("Environment")[0];
+    private GameObject environment;
+    private string env_tag;
+    public Forest forest;
+    public Mountain mountain;
+    public Sea sea;
+
+    public void SetEnvironment(string t, GameObject env){
+        environment = env;
+        env_tag = t;
     }
 
     public void GoBackHub(){
@@ -34,6 +39,19 @@ public class BackDoor : MonoBehaviour {
         hub.SetActive(true);
         floor.SetActive(true);
         environment.SetActive(false);
+        switch (env_tag){
+            case "Forest":
+                forest.DisableObjects();
+                break;
+            case "Mountain":
+                mountain.DisableObjects();
+                break;
+            case "Sea":
+                //sea.DisableObjects();
+                break;
+            default:
+                break;
+        }
         navigation.ExitRoom();
         capsule.SetActive(false);
 
