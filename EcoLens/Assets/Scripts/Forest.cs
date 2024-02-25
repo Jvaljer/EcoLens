@@ -29,6 +29,7 @@ public class Forest : MonoBehaviour {
     public void Init(){
         capsule.SetActive(true);
         capsule.transform.position = new Vector3(-11,5,-160);
+        capsule.transform.rotation = Quaternion.Euler(0,-65,0);
 
         player.transform.position = spawn.position;
         player.transform.rotation = capsule.transform.rotation;

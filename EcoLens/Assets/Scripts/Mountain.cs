@@ -29,6 +29,7 @@ public class Mountain : MonoBehaviour {
     public void Init(){
         capsule.SetActive(true);
         capsule.transform.position = new Vector3(455,3.7f,165);
+        capsule.transform.rotation = Quaternion.Euler(0,200,0);
         
         player.transform.rotation = capsule.transform.rotation;
         player.transform.position = spawn.position;
