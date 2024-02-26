@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InNOut : MonoBehaviour {
+    public AudioSource source;
     public DashBoard dashboard;
 
     public void OnTriggerExit(Collider other){
