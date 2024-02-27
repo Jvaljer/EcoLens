@@ -20,6 +20,8 @@ public class Sea : MonoBehaviour {
     public GameObject past;
     public GameObject present;
     public GameObject future;
+
+    public Material underwaterSkybox;
     private string cur_env = "";
 
     void Start(){
@@ -37,6 +39,19 @@ public class Sea : MonoBehaviour {
         dashboard_script.SetEnvironment(this.gameObject);
         ActiveObjects();
         dashboard_script.AddObjects(obj1.transform.GetComponent<Object>().obj_type, obj2.transform.GetComponent<Object>().obj_type, obj3.transform.GetComponent<Object>().obj_type);
+
+        //Added
+        // Enable fog
+        RenderSettings.skybox=underwaterSkybox;
+        RenderSettings.fog = true;
+        RenderSettings.fogMode = FogMode.Linear;
+        RenderSettings.fogColor = new Color32(154,186, 214, 255);
+        /*
+        string colorcode = "#9ABAD6";
+        int argb = Int32.Parse(colorcode.Replace("#", ""), NumberStyles.HexNumber);
+        Color clr = Color.FromArgb(argb);
+        RenderSettings.fogColor = clr;
+        */
     }
 
     public void Load(string time){

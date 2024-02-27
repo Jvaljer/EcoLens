@@ -32,6 +32,8 @@ public class BackDoor : MonoBehaviour {
     public AudioSource hover_sound;
     public AudioSource open_sound;
 
+    public Material normalSkybox;
+
     public void SetEnvironment(string t, GameObject env){
         environment = env;
         env_tag = t;
@@ -51,13 +53,18 @@ public class BackDoor : MonoBehaviour {
                 mountain.DisableObjects();
                 break;
             case "Sea":
-                //sea.DisableObjects();
+                sea.DisableObjects();
                 break;
             default:
                 break;
         }
         navigation.ExitRoom();
         capsule.SetActive(false);
+
+        //Added
+        RenderSettings.skybox=normalSkybox;
+        //Eventual fog dismiss
+        RenderSettings.fog = false; 
 
         player.transform.position = hub_spawn.position;
     }
