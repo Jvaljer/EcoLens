@@ -58,7 +58,16 @@ public class DashBoard : MonoBehaviour {
 
     private string current_time = "present";
 
+    public AudioSource spawn_sound;
+    public AudioSource travel_sound;
+    public AudioSource hover_sound;
+    public AudioSource out_sound;
+    public AudioSource click_sound;
+    public AudioSource win_sound;
+    public AudioSource loose_sound;
+
     public void ButtonHoverEnter(GameObject btn){
+        hover_sound.Play();
         Renderer r = btn.transform.GetComponent<Renderer>();
         if(r != null){
             r.material = btn_hover_M;
@@ -71,6 +80,7 @@ public class DashBoard : MonoBehaviour {
         }
     }
     public void ButtonClick(GameObject btn){
+        click_sound.Play();
         Renderer r = btn.transform.GetComponent<Renderer>();
         if(r != null){
             r.material = btn_click_M;
@@ -100,6 +110,7 @@ public class DashBoard : MonoBehaviour {
     }
 
     private void TimeTravel(){
+        travel_sound.Play();
         switch (cur_env){
             case "forest":
                 env_f.Load(current_time);
@@ -257,9 +268,11 @@ public class DashBoard : MonoBehaviour {
 
         //display quick message
         if(win){
+            win_sound.Play();
             indicator.text = "Well Done !!!";
         }
         if(loose){
+            loose_sound.Play();
             indicator.text = "Too Bad...";
         }
 
@@ -301,6 +314,7 @@ public class DashBoard : MonoBehaviour {
     }
 
     public void SpawnObject(string obj_str){
+        spawn_sound.Play();
         GameObject go;
         switch (obj_str){
             //mountain objects
@@ -355,6 +369,7 @@ public class DashBoard : MonoBehaviour {
     public void ObjectOut(string obj){
         Debug.Log("We got an object out duh");
         out_cpt++;
+        out_sound.Play();
         DisplayThrewInfo(obj);
         if(out_cpt==5 && !win){
             TravelToFuture();
@@ -368,6 +383,7 @@ public class DashBoard : MonoBehaviour {
     public void ObjectIn(){
         Debug.Log("We got an object in rn");
         out_cpt--;
+        out_sound.Play();
         out_pane.text = "Objects Out -> "+out_cpt+"/5";
     }
 

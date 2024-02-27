@@ -19,6 +19,10 @@ public class TutoNavigation : MonoBehaviour{
     public GameObject scores;
     public GameObject thanks;
 
+    //Sounds
+    public AudioSource hover_sound;
+    public AudioSource click_sound;
+
     //localizer
     private string current = ""; //"w", "g", "n", "m", "c", "s", "t"
     
@@ -27,6 +31,7 @@ public class TutoNavigation : MonoBehaviour{
     }
 
     public void HoverInBtn(GameObject btn){
+        hover_sound.Play();
         Renderer r = btn.transform.GetComponent<Renderer>();
         if(r != null){
             r.material = in_m;
@@ -40,6 +45,7 @@ public class TutoNavigation : MonoBehaviour{
     }
 
     public void ClickCancel(){
+        click_sound.Play();
         switch (current){
             case "w":
                 welcome.SetActive(false);
@@ -69,6 +75,7 @@ public class TutoNavigation : MonoBehaviour{
         next.SetActive(false);
     }
     public void ClickPrevious(){
+        click_sound.Play();
         switch (current){
             case "g":
                 game.SetActive(false);
@@ -108,6 +115,7 @@ public class TutoNavigation : MonoBehaviour{
         }
     }
     public void ClickNext(){
+        click_sound.Play();
         switch (current){
             case "w":
                 welcome.SetActive(false);

@@ -12,7 +12,7 @@ public class Object : MonoBehaviour {
     private bool counted_out = false;
     public string obj_type;
 
-    public AudioSource out_sound;
+    public AudioSource grab_sound;
     public AudioSource hit_sound;
 
     void Update(){
@@ -41,6 +41,7 @@ public class Object : MonoBehaviour {
         //here we wanna display the related informations of the picked object
         dashboard.DisplayInformations(obj_type);
         dropped = false;
+        grab_sound.Play();
     }
     public void Drop(){
         dashboard.DisplayInformations(obj_type);
@@ -57,6 +58,7 @@ public class Object : MonoBehaviour {
         if(counted_out){
             dashboard.ObjectIn();
         }
+        dashboard.DestroyObject(obj_type);
     }
 
     private void OnCollisionEnter(Collision other) {

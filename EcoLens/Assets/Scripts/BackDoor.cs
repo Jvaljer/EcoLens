@@ -29,12 +29,16 @@ public class BackDoor : MonoBehaviour {
     public Mountain mountain;
     public Sea sea;
 
+    public AudioSource hover_sound;
+    public AudioSource open_sound;
+
     public void SetEnvironment(string t, GameObject env){
         environment = env;
         env_tag = t;
     }
 
     public void GoBackHub(){
+        open_sound.Play();
         Debug.Log("Going Back Hub");
         hub.SetActive(true);
         floor.SetActive(true);
@@ -59,6 +63,7 @@ public class BackDoor : MonoBehaviour {
     }
 
     public void HoverIn(){
+        hover_sound.Play();
         Renderer r1 = body.transform.GetComponent<Renderer>(); 
         Renderer r2 = low_j.transform.GetComponent<Renderer>(); 
         Renderer r3 = high_j.transform.GetComponent<Renderer>(); 

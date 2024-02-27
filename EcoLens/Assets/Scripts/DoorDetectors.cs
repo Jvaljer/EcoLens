@@ -13,6 +13,8 @@ public class DoorDetectors : MonoBehaviour {
     public GameObject sea_door;
     public GameObject mountain_door;
 
+    public AudioSource door_hover_sound;
+
     public GameObject forest_env;
     public GameObject mountain_env;
     public GameObject sea_env;
@@ -38,6 +40,7 @@ public class DoorDetectors : MonoBehaviour {
         if(!forest){
             return;
         }
+        door_hover_sound.Play();
         Renderer renderer = forest_door.transform.GetChild(0).GetComponent<Renderer>(); 
         if(renderer !=null){
             renderer.material = available_M;
@@ -65,6 +68,7 @@ public class DoorDetectors : MonoBehaviour {
         if(!seaside){
             return;
         }
+        door_hover_sound.Play();
         Renderer renderer = sea_door.transform.GetChild(0).GetComponent<Renderer>(); 
         if(renderer !=null){
             renderer.material = available_M;
@@ -92,6 +96,7 @@ public class DoorDetectors : MonoBehaviour {
         if(!mountain){
             return;
         }
+        door_hover_sound.Play();
         Renderer renderer = mountain_door.transform.GetChild(0).GetComponent<Renderer>(); 
         if(renderer !=null){
             renderer.material = available_M;
