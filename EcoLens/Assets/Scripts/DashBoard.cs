@@ -362,6 +362,55 @@ public class DashBoard : MonoBehaviour {
             objects[obj_str]++;
         }
     }
+    public GameObject SpawnSetObject(string obj_str){
+        spawn_sound.Play();
+        GameObject go;
+        switch (obj_str){
+            //mountain objects
+            case "cigaret":
+                go = Instantiate(cigaret, slot1.position, slot1.rotation);
+                break;
+            case "drink":
+                go = Instantiate(drink, slot3.position, slot3.rotation);
+                break;
+            case "food-wrapper":
+                go = Instantiate(foodwrapper, slot2.position, slot2.rotation);
+                break;
+            
+            //forest objects
+            case "plastic-bottle":
+                go = Instantiate(pbottle, slot1.position, slot1.rotation);
+                break;
+            case "tire":
+                go = Instantiate(tire, slot2.position, slot2.rotation);
+                break;
+            case "paper-towel":
+                go = Instantiate(papertowel, slot3.position, slot3.rotation);
+                break;
+            
+            //sea objects
+            case "can":
+                go = Instantiate(can, slot1.position, slot1.rotation);
+                break;
+            case "glass-bottle":
+                go = Instantiate(gbottle, slot2.position, slot2.rotation);
+                break;
+            case "plastic-bag":
+                go = Instantiate(trashbag, slot3.position, slot3.rotation);
+                break;
+            
+            default:
+                go = null;
+                break;
+        }
+        if(go!=null){
+            Debug.Log("SPAWNED A NOT NULL OBJECT");
+            go.tag = "Object";
+            go.transform.GetComponent<Object>().Initiate(this, room.transform, 1);
+            objects[obj_str]++;
+        }
+        return go;
+    }
 
     public void DestroyObject(string obj_type){
         objects[obj_type]--;

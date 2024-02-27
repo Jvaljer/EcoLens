@@ -44,7 +44,6 @@ public class BackDoor : MonoBehaviour {
         Debug.Log("Going Back Hub");
         hub.SetActive(true);
         floor.SetActive(true);
-        environment.SetActive(false);
         switch (env_tag){
             case "Forest":
                 forest.DisableObjects();
@@ -58,6 +57,7 @@ public class BackDoor : MonoBehaviour {
             default:
                 break;
         }
+        environment.SetActive(false);
         navigation.ExitRoom();
         capsule.SetActive(false);
 

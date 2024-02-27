@@ -92,13 +92,28 @@ public class Forest : MonoBehaviour {
     }
 
     private void ActiveObjects(){
-        obj1.SetActive(true);
-        obj2.SetActive(true);
-        obj3.SetActive(true);
+        if(obj1!=null){
+            obj1.SetActive(true);
+        } else {
+            obj1 = dashboard_script.SpawnSetObject("plastic-bottle");
+        }
+        if(obj2!=null){
+            obj2.SetActive(true);
+        } else {
+            obj2 = dashboard_script.SpawnSetObject("tire");
+        }
+        if(obj3!=null){
+            obj3.SetActive(true);
+        } else {
+            obj3 = dashboard_script.SpawnSetObject("paper-towel");
+        }
     }
     public void DisableObjects(){
-        obj1.SetActive(false);
-        obj2.SetActive(false);
-        obj3.SetActive(false);
+        if(obj1!=null)
+            obj1.SetActive(false);
+        if(obj2!=null)
+            obj2.SetActive(false);
+        if(obj3!=null)
+            obj3.SetActive(false);
     }
 }
