@@ -8,9 +8,12 @@ public class Object : MonoBehaviour {
     
     private bool dropped = false;
     public bool in_capsule = true;
-    private bool init = false;
+    public bool init = false;
     private bool counted_out = false;
     public string obj_type;
+
+    public AudioSource out_sound;
+    public AudioSource hit_sound;
 
     void Update(){
         if(!init) return;
@@ -54,5 +57,10 @@ public class Object : MonoBehaviour {
         if(counted_out){
             dashboard.ObjectIn();
         }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if(init)
+            hit_sound.Play();
     }
 }
