@@ -8,9 +8,12 @@ public class Object : MonoBehaviour {
     
     private bool dropped = false;
     public bool in_capsule = true;
-    private bool init = false;
+    public bool init = false;
     private bool counted_out = false;
     public string obj_type;
+
+    public AudioSource grab_sound;
+    public AudioSource hit_sound;
 
     void Update(){
         if(!init) return;
@@ -22,6 +25,7 @@ public class Object : MonoBehaviour {
             if(!in_capsule){
                 if(!counted_out){
                     dashboard.ObjectOut(obj_type);
+                    dashboard.PlaceInfo(this.transform.position);
                     counted_out = true;
                 }
             } else {
@@ -37,13 +41,14 @@ public class Object : MonoBehaviour {
         //here we wanna display the related informations of the picked object
         dashboard.DisplayInformations(obj_type);
         dropped = false;
+        grab_sound.Play();
     }
     public void Drop(){
         dashboard.DisplayInformations(obj_type);
         dropped = true;
     }
 
-    public void Initiate(DashBoard script, Transform boundaries){
+    public void Initiate(DashBoard script, Transform boundaries, int i){
         dashboard = script;
         capsule = boundaries;
         init = true;
@@ -53,5 +58,11 @@ public class Object : MonoBehaviour {
         if(counted_out){
             dashboard.ObjectIn();
         }
+        dashboard.DestroyObject(obj_type);
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if(init)
+            hit_sound.Play();
     }
 }

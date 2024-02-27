@@ -8,9 +8,16 @@ public class DashBoard : MonoBehaviour {
     public TMP_Text bin_pane;
     public TMP_Text out_pane;
     public TMP_Text outinfo_pane;
+    public TMP_Text indicator;
 
     public GameObject room;
     private GameObject environment;
+    public GameObject info_screen;
+
+    private Forest env_f;
+    private Mountain env_m;
+    private Sea env_s;
+    private string cur_env = "";
 
     public Material btn_M;
     public Material btn_click_M;
@@ -19,6 +26,8 @@ public class DashBoard : MonoBehaviour {
     public GameObject past_btn;
     public GameObject present_btn;
     public GameObject future_btn;
+    public GameObject player_cam;
+    public GameObject bin_screen;
 
     public Transform slot1;
     public Transform slot2;
@@ -42,12 +51,23 @@ public class DashBoard : MonoBehaviour {
 
     private bool win = false;
     private bool loose = false;
+    private bool end = false;
+    private bool set_info = false;
 
     private Dictionary<string, int> objects;
 
     private string current_time = "present";
 
+    public AudioSource spawn_sound;
+    public AudioSource travel_sound;
+    public AudioSource hover_sound;
+    public AudioSource out_sound;
+    public AudioSource click_sound;
+    public AudioSource win_sound;
+    public AudioSource loose_sound;
+
     public void ButtonHoverEnter(GameObject btn){
+        hover_sound.Play();
         Renderer r = btn.transform.GetComponent<Renderer>();
         if(r != null){
             r.material = btn_hover_M;
@@ -60,6 +80,7 @@ public class DashBoard : MonoBehaviour {
         }
     }
     public void ButtonClick(GameObject btn){
+        click_sound.Play();
         Renderer r = btn.transform.GetComponent<Renderer>();
         if(r != null){
             r.material = btn_click_M;
@@ -67,43 +88,80 @@ public class DashBoard : MonoBehaviour {
     }
 
     public void TravelToPast(){
-        if(current_time == "past")
+        if(current_time == "past" || end)
             return;
-        Debug.Log("Travelling to PAST");
         current_time = "past";
+        indicator.text = "Currently in PAST";
+        TimeTravel();
     }
     public void TravelToPresent(){
-        if(current_time == "present")
+        if(current_time == "present" || end)
             return;
-        Debug.Log("Travelling to PRESENT");
-        current_time = "past";
+        current_time = "present";
+        indicator.text = "Currently in PRESENT";
+        TimeTravel();
     }
     public void TravelToFuture(){
-        if(current_time == "future")
+        if(current_time == "future" || end)
             return;
-        Debug.Log("Travelling to FUTURE");
-        current_time = "past";
+        indicator.text = "Currently in FUTURE";
+        current_time = "future";
+        TimeTravel();
+    }
+
+    private void TimeTravel(){
+        travel_sound.Play();
+        Debug.Log("Travelling while in "+cur_env);
+        switch (cur_env){
+            case "forest":
+                env_f.Load(current_time);
+                break;
+            case "mountain":
+                env_m.Load(current_time);
+                break;
+            case "sea":
+                env_s.Load(current_time);
+                break;
+            default:
+                break;
+        }
     }
 
     public void SetEnvironment(GameObject env){
         environment = env;
+        switch (environment.tag){
+            case "Forest":
+                env_f = environment.transform.GetComponent<Forest>();
+                cur_env = "forest";
+                break;
+            case "Mountain":
+                env_m = environment.transform.GetComponent<Mountain>();
+                cur_env = "mountain";
+                break;
+            case "Sea":
+                env_s = environment.transform.GetComponent<Sea>();
+                cur_env = "sea";
+                break;
+            default:
+                break;
+        }
     }
 
-    public void PlaceObjects(GameObject o1, GameObject o2, GameObject o3){
+    public void SetObjects(GameObject o1, GameObject o2, GameObject o3){
         o1.transform.position = slot1.position;
         o2.transform.position = slot2.position;
         o3.transform.position = slot3.position;
 
-        o1.transform.GetComponent<Object>().Initiate(this, room.transform);
-        o2.transform.GetComponent<Object>().Initiate(this, room.transform);
-        o3.transform.GetComponent<Object>().Initiate(this, room.transform);
+        o1.transform.GetComponent<Object>().Initiate(this, room.transform, 0);
+        o2.transform.GetComponent<Object>().Initiate(this, room.transform, 0);
+        o3.transform.GetComponent<Object>().Initiate(this, room.transform, 0);
 
         btn1.transform.GetComponent<SpawnBtn>().SetObject(o1.transform.GetComponent<Object>().obj_type);
         btn2.transform.GetComponent<SpawnBtn>().SetObject(o2.transform.GetComponent<Object>().obj_type);
         btn3.transform.GetComponent<SpawnBtn>().SetObject(o3.transform.GetComponent<Object>().obj_type);
 
         out_cpt = 0;
-        out_pane.text = "Objects Out -> "+out_cpt+"/10";
+        out_pane.text = "Objects Out -> "+out_cpt+"/5";
     }
     public void AddObjects(string o1, string o2, string o3){
         objects = new Dictionary<string, int>();
@@ -115,47 +173,47 @@ public class DashBoard : MonoBehaviour {
 
     public void DisplayInformations(string obj){
         switch (obj){
-        case "test-cube":
-            info_pane.text = "The object you grabbed is the testing cube";
-            break;
-        
-        // Mountain objects
-        case "cigaret":
-            info_pane.text = "Cigarettes are commonly found littered in mountain areas, posing a threat to wildlife and ecosystems.";
-            break;
-        case "drink":
-            info_pane.text = "You've found a discarded beverage container, commonly left behind in mountainous regions.";
-            break;
-        case "food-wrapper":
-            info_pane.text = "This food wrapper is likely from hikers or campers, unfortunately left behind in nature.";
-            break;
-        
-        // Forest objects
-        case "plastic-bottle":
-            info_pane.text = "Plastic bottles are often discarded in forests, contributing to pollution and harming forest inhabitants due to their plastic materials.";
-            break;
-        case "tire":
-            info_pane.text = "Tires -as any engine parts- dumped in forests pose a significant environmental hazard, contaminating soil and water.";
-            break;
-        case "paper-towel":
-            info_pane.text = "Paper towels littered in forests can take a long time to decompose, impacting the natural environment.";
-            break;
-        
-        // Sea objects
-        case "can":
-            info_pane.text = "Cans are commonly found in coastal areas, washed ashore by tides, posing a threat to marine life.";
-            break;
-        case "glass-bottle":
-            info_pane.text = "Glass bottles discarded in the sea can break into dangerous shards and harm marine creatures.";
-            break;
-        case "plastic-bag":
-            info_pane.text = "Plastic bags are a major source of marine pollution, endangering ocean ecosystems and wildlife.";
-            break;
-        
-        default:
-            info_pane.text = "Object:["+obj+"] hasn't been implemented yet";
-            break;
-    }
+            case "test-cube":
+                info_pane.text = "The object you grabbed is the testing cube";
+                break;
+            
+            // Mountain objects
+            case "cigaret":
+                info_pane.text = "Cigarettes are commonly found littered in mountain areas, posing a threat to wildlife and ecosystems.";
+                break;
+            case "drink":
+                info_pane.text = "You've found a discarded beverage container, commonly left behind in mountainous regions.";
+                break;
+            case "food-wrapper":
+                info_pane.text = "This food wrapper is likely from hikers or campers, unfortunately left behind in nature.";
+                break;
+            
+            // Forest objects
+            case "plastic-bottle":
+                info_pane.text = "Plastic bottles are often discarded in forests, contributing to pollution and harming forest inhabitants due to their plastic materials.";
+                break;
+            case "tire":
+                info_pane.text = "Tires -as any engine parts- dumped in forests pose a significant environmental hazard, contaminating soil and water.";
+                break;
+            case "paper-towel":
+                info_pane.text = "Paper towels littered in forests can take a long time to decompose, impacting the natural environment.";
+                break;
+            
+            // Sea objects
+            case "can":
+                info_pane.text = "Cans are commonly found in coastal areas, washed ashore by tides, posing a threat to marine life.";
+                break;
+            case "glass-bottle":
+                info_pane.text = "Glass bottles discarded in the sea can break into dangerous shards and harm marine creatures.";
+                break;
+            case "plastic-bag":
+                info_pane.text = "Plastic bags are a major source of marine pollution, endangering ocean ecosystems and wildlife.";
+                break;
+            
+            default:
+                info_pane.text = "Object:["+obj+"] hasn't been implemented yet";
+                break;
+        }
     }
 
     public void DisplayThrewInfo(string obj){
@@ -199,23 +257,65 @@ public class DashBoard : MonoBehaviour {
         }
     }
     private void DisplayLoose(){
-        //must implement
+        //here we wanna display an explanatory message on the front wall
     }
     private void DisplayWin(){
-        //must implement
+        //here we wanna display an explanatory message on the front wall
+    }
+    private void End(){
+        //here we wanna set the counters OFF
+        bin_screen.SetActive(false);
+        out_pane.gameObject.SetActive(false);
+
+        //display quick message
+        if(win){
+            win_sound.Play();
+            indicator.text = "Well Done !!!";
+        }
+        if(loose){
+            loose_sound.Play();
+            indicator.text = "Too Bad...";
+        }
+
+        //also disable the objects
+        switch (cur_env){
+            case "forest":
+                env_f.DisableObjects();
+                break;
+            case "mountain":
+                env_m.DisableObjects();
+                break;
+            case "sea":
+                env_s.DisableObjects();
+                break;
+        }
+        btn1.SetActive(false);
+        btn2.SetActive(false);
+        btn3.SetActive(false);
+    }
+    public void Launch(){
+        if(!end)
+            return;
+        
+        end = false;
+        bin_screen.SetActive(true);
+        out_pane.gameObject.SetActive(true);
     }
 
     public void ThrowInBin(){
         bin_cpt++;
-        if(bin_cpt==10 && !loose){
+        if(bin_cpt==5 && !loose){
             TravelToPast();
             DisplayWin();
             win = true;
+            end = true;
+            End();
         }
-        bin_pane.text = bin_cpt+"/10";
+        bin_pane.text = bin_cpt+"/5";
     }
 
     public void SpawnObject(string obj_str){
+        spawn_sound.Play();
         GameObject go;
         switch (obj_str){
             //mountain objects
@@ -252,12 +352,13 @@ public class DashBoard : MonoBehaviour {
                 break;
             
             default:
-                Debug.Log("default case");
                 go = null;
                 break;
         }
         if(go!=null){
-            go.transform.GetComponent<Object>().Initiate(this, room.transform);
+            Debug.Log("SPAWNED A NOT NULL OBJECT");
+            go.tag = "Object";
+            go.transform.GetComponent<Object>().Initiate(this, room.transform, 1);
             objects[obj_str]++;
         }
     }
@@ -268,16 +369,31 @@ public class DashBoard : MonoBehaviour {
 
     public void ObjectOut(string obj){
         out_cpt++;
+        out_sound.Play();
         DisplayThrewInfo(obj);
-        if(out_cpt==10 && !win){
+        if(out_cpt==5 && !win){
             TravelToFuture();
             DisplayWin();
             loose = true;
+            end = true;
+            End();
         }
-        out_pane.text = "Objects Out -> "+out_cpt+"/10";
+        out_pane.text = "Objects Out -> "+out_cpt+"/5";
     }
     public void ObjectIn(){
+        Debug.Log("We got an object in rn");
         out_cpt--;
-        out_pane.text = "Objects Out -> "+out_cpt+"/10";
+        out_sound.Play();
+        out_pane.text = "Objects Out -> "+out_cpt+"/5";
+    }
+
+    public void PlaceInfo(Vector3 pts){
+        if(!set_info){
+            info_screen.SetActive(true);
+            set_info = true;
+        }
+        info_screen.transform.position = pts;
+        Vector3 cam_dir = player_cam.transform.position - info_screen.transform.position;
+        info_screen.transform.rotation = Quaternion.LookRotation(cam_dir);
     }
 }

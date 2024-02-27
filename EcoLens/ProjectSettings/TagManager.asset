@@ -10,6 +10,12 @@ TagManager:
   - Object
   - Environment
   - Placeholder
+  - Rig
+  - Wall
+  - Forest
+  - Mountain
+  - EnvGround
+  - Sea
   layers:
   - Default
   - TransparentFX
