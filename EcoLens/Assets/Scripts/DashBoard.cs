@@ -111,6 +111,7 @@ public class DashBoard : MonoBehaviour {
 
     private void TimeTravel(){
         travel_sound.Play();
+        Debug.Log("Travelling while in "+cur_env);
         switch (cur_env){
             case "forest":
                 env_f.Load(current_time);
@@ -119,7 +120,7 @@ public class DashBoard : MonoBehaviour {
                 env_m.Load(current_time);
                 break;
             case "sea":
-                //env_s.Load(current_time);
+                env_s.Load(current_time);
                 break;
             default:
                 break;
@@ -160,7 +161,7 @@ public class DashBoard : MonoBehaviour {
         btn3.transform.GetComponent<SpawnBtn>().SetObject(o3.transform.GetComponent<Object>().obj_type);
 
         out_cpt = 0;
-        out_pane.text = "Objects Out -> "+out_cpt+"/10";
+        out_pane.text = "Objects Out -> "+out_cpt+"/5";
     }
     public void AddObjects(string o1, string o2, string o3){
         objects = new Dictionary<string, int>();
@@ -285,7 +286,7 @@ public class DashBoard : MonoBehaviour {
                 env_m.DisableObjects();
                 break;
             case "sea":
-                //env_s.DisableObjects();
+                env_s.DisableObjects();
                 break;
         }
         btn1.SetActive(false);

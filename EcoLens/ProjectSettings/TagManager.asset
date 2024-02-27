@@ -15,6 +15,7 @@ TagManager:
   - Forest
   - Mountain
   - EnvGround
+  - Sea
   layers:
   - Default
   - TransparentFX

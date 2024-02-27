@@ -28,7 +28,8 @@ public class Sea : MonoBehaviour {
 
     public void Init(){
         capsule.SetActive(true);
-        capsule.transform.position = new Vector3(0, 0, 0);
+        capsule.transform.position = new Vector3(-44,7.25f,-52);
+        capsule.transform.rotation = Quaternion.Euler(0,120,0);
 
         player.transform.position = spawn.position;
         player.transform.rotation = capsule.transform.rotation;
@@ -39,6 +40,7 @@ public class Sea : MonoBehaviour {
     }
 
     public void Load(string time){
+        Debug.Log("Sea travelling to "+time);
         switch(time){
             case "past":
                 LoadPast();
