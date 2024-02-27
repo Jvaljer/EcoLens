@@ -367,7 +367,6 @@ public class DashBoard : MonoBehaviour {
     }
 
     public void ObjectOut(string obj){
-        Debug.Log("We got an object out duh");
         out_cpt++;
         out_sound.Play();
         DisplayThrewInfo(obj);
