@@ -34,7 +34,7 @@ public class Sea : MonoBehaviour {
         capsule.transform.rotation = Quaternion.Euler(0,120,0);
 
         player.transform.position = spawn.position;
-        player.transform.rotation = capsule.transform.rotation;
+        player.transform.rotation = Quaternion.Euler(0,120,0);
 
         dashboard_script.SetEnvironment(this.gameObject);
         ActiveObjects();

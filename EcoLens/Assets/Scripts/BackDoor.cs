@@ -57,6 +57,7 @@ public class BackDoor : MonoBehaviour {
             default:
                 break;
         }
+        
         environment.SetActive(false);
         navigation.ExitRoom();
         capsule.SetActive(false);
